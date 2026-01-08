@@ -32,9 +32,9 @@ const journeySteps = [
   },
   {
     year: "2024-Now",
-    title: "Web3 & Leadership",
+    title: "Frontend & Web3 Developer",
     description:
-      "Currently at Cryptomex as a Frontend/Web3 Engineer. Building frontend architecture, integrating blockchain technologies, and working on a platform that processes millions in transactions.",
+      "Currently at Cryptomex as a Frontend/Web3 Developer. Building interfaces, integrating blockchain technologies, and contributing to a platform that processes millions in transactions.",
     icon: BlockchainIcon,
     color: "bg-playful-purple",
   },
