@@ -14,6 +14,7 @@ import { ContactSection } from "@/components/contact-section"
 import { FloatingDoodles } from "@/components/floating-doodles"
 import { GuidedTour } from "@/components/guided-tour"
 import { Footer } from "@/components/footer"
+import { VisitorCounter } from "@/components/visitor-counter"
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Navbar />
       <GuidedTour />
       <FloatingDoodles />
+      <VisitorCounter />
       <HeroSection />
       <AboutSection />
       <VideoIntroSection />
