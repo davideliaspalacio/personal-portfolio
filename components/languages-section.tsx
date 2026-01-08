@@ -9,14 +9,14 @@ const languages = [
   {
     name: "Spanish",
     level: "Native",
-    proficiency: 100,
+    description: "Lengua materna",
     flag: "ES",
     color: "bg-playful-yellow",
   },
   {
     name: "English",
-    level: "Professional (B2+)",
-    proficiency: 85,
+    level: "B2+ Certified",
+    description: "Speaking & Writing certified",
     flag: "EN",
     color: "bg-playful-blue",
   },
@@ -75,32 +75,51 @@ export function LanguagesSection() {
                     <ColombiaFlagIcon className="w-full h-full" />
                   ) : (
                     <svg viewBox="0 0 48 32" className="w-full h-full">
-                      <rect width="48" height="32" fill="#012169" />
-                      <path d="M0,0 L48,32 M48,0 L0,32" stroke="#fff" strokeWidth="6" />
-                      <path d="M0,0 L48,32 M48,0 L0,32" stroke="#C8102E" strokeWidth="4" />
-                      <path d="M24,0 L24,32 M0,16 L48,16" stroke="#fff" strokeWidth="10" />
-                      <path d="M24,0 L24,32 M0,16 L48,16" stroke="#C8102E" strokeWidth="6" />
+                      {/* USA Flag */}
+                      <rect width="48" height="32" fill="#B22234" />
+                      {/* White stripes */}
+                      <rect y="2.46" width="48" height="2.46" fill="#fff" />
+                      <rect y="7.38" width="48" height="2.46" fill="#fff" />
+                      <rect y="12.31" width="48" height="2.46" fill="#fff" />
+                      <rect y="17.23" width="48" height="2.46" fill="#fff" />
+                      <rect y="22.15" width="48" height="2.46" fill="#fff" />
+                      <rect y="27.08" width="48" height="2.46" fill="#fff" />
+                      {/* Blue canton */}
+                      <rect width="19.2" height="17.23" fill="#3C3B6E" />
+                      {/* Stars (simplified) */}
+                      <g fill="#fff">
+                        <circle cx="3" cy="2.5" r="1" />
+                        <circle cx="7" cy="2.5" r="1" />
+                        <circle cx="11" cy="2.5" r="1" />
+                        <circle cx="15" cy="2.5" r="1" />
+                        <circle cx="5" cy="5" r="1" />
+                        <circle cx="9" cy="5" r="1" />
+                        <circle cx="13" cy="5" r="1" />
+                        <circle cx="3" cy="7.5" r="1" />
+                        <circle cx="7" cy="7.5" r="1" />
+                        <circle cx="11" cy="7.5" r="1" />
+                        <circle cx="15" cy="7.5" r="1" />
+                        <circle cx="5" cy="10" r="1" />
+                        <circle cx="9" cy="10" r="1" />
+                        <circle cx="13" cy="10" r="1" />
+                        <circle cx="3" cy="12.5" r="1" />
+                        <circle cx="7" cy="12.5" r="1" />
+                        <circle cx="11" cy="12.5" r="1" />
+                        <circle cx="15" cy="12.5" r="1" />
+                      </g>
                     </svg>
                   )}
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold">{lang.name}</h3>
-                  <p className="text-foreground/80">{lang.level}</p>
+                  <span className="inline-block bg-card/80 text-foreground px-3 py-1 rounded-full text-sm font-bold border-2 border-foreground/50">
+                    {lang.level}
+                  </span>
                 </div>
               </div>
 
-              {/* Progress bar */}
-              <div className="relative h-6 bg-card/50 rounded-full border-2 border-foreground overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={isVisible ? { width: `${lang.proficiency}%` } : {}}
-                  transition={{ delay: 0.5 + index * 0.2, duration: 1, ease: "easeOut" }}
-                  className="absolute inset-y-0 left-0 bg-foreground/80 rounded-full"
-                />
-                <span className="absolute inset-0 flex items-center justify-center text-sm font-bold text-foreground mix-blend-difference">
-                  {lang.proficiency}%
-                </span>
-              </div>
+              {/* Description */}
+              <p className="text-foreground/80 text-center font-medium">{lang.description}</p>
             </motion.div>
           ))}
         </div>

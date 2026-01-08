@@ -10,7 +10,7 @@ const aboutItems = [
   { Icon: BlockchainIcon, text: "Web3 & Smart Contract integration", color: "bg-playful-purple" },
   { Icon: HeartIcon, text: "Clean architecture & long-term maintainability", color: "bg-playful-red" },
   { Icon: RocketIcon, text: "API integrations & n8n automation", color: "bg-playful-green" },
-  { Icon: GlobeIcon, text: "Spanish (native) & English (B2)", color: "bg-playful-orange" },
+  { Icon: GlobeIcon, text: "Spanish (Native) & English (B2+ Certified)", color: "bg-playful-orange" },
   { Icon: CoffeeIcon, text: "Remote-first from Colombia", color: "bg-playful-yellow" },
 ]
 
