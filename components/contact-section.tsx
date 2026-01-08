@@ -36,17 +36,39 @@ export function ContactSection() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const { playSound } = useSound()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError(null)
     playSound("whoosh")
-    // Simulate submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    setIsSubmitting(false)
-    setSubmitted(true)
-    playSound("woohoo")
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      
+      const data = await response.json()
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Something went wrong')
+      }
+      
+      setSubmitted(true)
+      playSound("woohoo")
+      setFormData({ name: "", email: "", message: "" })
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to send message')
+      playSound("bonk")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleFocus = (field: string) => {
@@ -92,6 +114,12 @@ export function ContactSection() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Error message */}
+            {error && (
+              <div className="bg-playful-red/20 border-3 border-playful-red rounded-2xl p-4 text-center animate-pop-in">
+                <p className="text-foreground font-medium">❌ {error}</p>
+              </div>
+            )}
             {/* Name field */}
             <div className={`transition-all duration-300 ${focusedField === "name" ? "scale-[1.02]" : ""}`}>
               <label className="block text-lg mb-2 font-medium flex items-center gap-2">
