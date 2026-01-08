@@ -14,7 +14,7 @@ const socialLinks = [
   },
   {
     name: "GitHub",
-    url: "https://github.com/davidelias",
+    url: "https://github.com/davideliaspalacio",
     Icon: GitIcon,
     color: "bg-foreground",
     hoverColor: "hover:bg-foreground/80",

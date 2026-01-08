@@ -29,8 +29,7 @@ npm run build
 
 Feel free to reach out if you want to work together or just say hi!
 
-- LinkedIn: [David Palacio](https://linkedin.com/in/david-palacio)
-- GitHub: [@davidpalacio](https://github.com/davidpalacio)
+- GitHub: [@davideliaspalacio](https://github.com/davideliaspalacio)
 
 ---
 

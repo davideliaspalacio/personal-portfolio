@@ -13,7 +13,7 @@ import { useSound } from "@/lib/sounds"
 const socials = [
   {
     icon: Github,
-    href: "https://github.com/davidepalacio",
+    href: "https://github.com/davideliaspalacio",
     label: "GitHub",
     color: "hover:bg-foreground hover:text-background",
   },
