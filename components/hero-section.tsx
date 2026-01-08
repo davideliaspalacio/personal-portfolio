@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ArrowDown } from "lucide-react"
+import { ArrowDown, Download } from "lucide-react"
 import {
   SparkleIcon,
   WaveHandIcon,
@@ -109,7 +109,7 @@ export function HeroSection() {
         transition={{ delay: 0.4 }}
         className="text-5xl md:text-7xl lg:text-8xl font-serif text-center mb-4 text-balance"
       >
-        {"Hey! I'm David Palacio"}{" "}
+        {"Hey! I'm David Elias Palacio"}{" "}
       </motion.h1>
 
       <motion.p
@@ -145,8 +145,13 @@ export function HeroSection() {
         ))}
       </motion.div>
 
-      {/* CTA Button */}
-      <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1 }}>
+      {/* CTA Buttons */}
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.8 }} 
+        animate={{ opacity: 1, scale: 1 }} 
+        transition={{ delay: 1 }}
+        className="flex flex-col sm:flex-row gap-4"
+      >
         <Button
           size="lg"
           className="group text-xl px-8 py-6 rounded-full bg-playful-blue hover:bg-playful-purple text-white border-3 border-foreground transition-all duration-300 hover:scale-110 hover:-rotate-2 sticker"
@@ -155,6 +160,18 @@ export function HeroSection() {
         >
           <span className="mr-2">See my work</span>
           <ArrowDown className="w-5 h-5 group-hover:animate-bounce" />
+        </Button>
+        
+        <Button
+          size="lg"
+          asChild
+          className="group text-xl px-8 py-6 rounded-full bg-playful-green hover:bg-playful-yellow text-foreground border-3 border-foreground transition-all duration-300 hover:scale-110 hover:rotate-2 sticker"
+          onMouseEnter={() => playSound("hover")}
+        >
+          <a href="/David_Elias_Palacio_CV (1).pdf" download onClick={() => playSound("success")}>
+            <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
+            <span>Download CV</span>
+          </a>
         </Button>
       </motion.div>
 

@@ -6,7 +6,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Send, Github, Linkedin, Mail } from "lucide-react"
+import { Send, Github, Linkedin, Mail, Download } from "lucide-react"
 import { RocketIcon, HeartIcon, CoffeeIcon } from "./svg-icons"
 import { useSound } from "@/lib/sounds"
 
@@ -183,7 +183,7 @@ export function ContactSection() {
         {/* Social links */}
         <div className="mt-16 text-center">
           <p className="text-lg text-muted-foreground mb-6">Or find me on the interwebs:</p>
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-4 mb-8">
             {socials.map((social) => (
               <a
                 key={social.label}
@@ -198,6 +198,17 @@ export function ContactSection() {
               </a>
             ))}
           </div>
+          
+          {/* Download CV Button */}
+          <a
+            href="/David_Elias_Palacio_CV (1).pdf"
+            download
+            onClick={() => playSound("success")}
+            className="inline-flex items-center gap-2 px-8 py-4 bg-playful-green hover:bg-playful-yellow text-foreground font-bold text-lg rounded-full border-3 border-foreground transition-all duration-300 hover:scale-105 hover:rotate-1 sticker"
+          >
+            <Download className="w-5 h-5" />
+            Download my CV
+          </a>
         </div>
 
         {/* Footer */}
