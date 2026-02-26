@@ -226,7 +226,7 @@ export function ContactSection() {
 
           {/* Download CV Button */}
           <a
-            href="/David_Elias_Palacio_CV (1).pdf"
+            href="/David_Elias_Palacio_CV-1.pdf"
             download
             onClick={() => playSound("success")}
             className="inline-flex items-center gap-2 px-8 py-4 bg-playful-green hover:bg-playful-yellow text-foreground font-bold text-lg rounded-full border-3 border-foreground transition-all duration-300 hover:scale-105 hover:rotate-1 sticker"

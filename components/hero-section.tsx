@@ -168,7 +168,7 @@ export function HeroSection() {
           className="group text-xl px-8 py-6 rounded-full bg-playful-green hover:bg-playful-yellow text-foreground border-3 border-foreground transition-all duration-300 hover:scale-110 hover:rotate-2 sticker"
           onMouseEnter={() => playSound("hover")}
         >
-          <a href="/David_Elias_Palacio_CV (1).pdf" download onClick={() => playSound("success")}>
+          <a href="/David_Elias_Palacio_CV-1.pdf" download onClick={() => playSound("success")}>
             <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
             <span>Download CV</span>
           </a>
