@@ -8,8 +8,8 @@ import { useSound } from "@/lib/sounds"
 const testimonials = [
   {
     id: 1,
-    name: "Carlos Rodriguez",
-    role: "Tech Lead @ Cryptomex",
+    name: "Heric Olier",
+    role: "Frontend Lead",
     content:
       "David is an exceptional frontend developer. His attention to detail and ability to create pixel-perfect interfaces is impressive. He quickly became a key player in our Web3 platform development.",
     rating: 5,
@@ -17,28 +17,28 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Maria Santos",
-    role: "Product Manager @ Virtual Tec",
+    name: "Danilo Ibáñez",
+    role: "Web3 Developer",
     content:
-      "Working with David was a pleasure. He has a great ability to translate business requirements into technical solutions and always delivers high-quality work on time.",
+      "Working with David on Web3 integrations was a pleasure. He has a great ability to translate complex blockchain requirements into seamless user experiences and always delivers high-quality work on time.",
     rating: 5,
     color: "bg-playful-blue",
   },
   {
     id: 3,
-    name: "Juan Martinez",
-    role: "Senior Developer @ Somos Blumer",
+    name: "Diego Barona",
+    role: "Backend Developer",
     content:
-      "David showed incredible growth during his time with us. His eagerness to learn and adapt to new technologies made him stand out. A true team player!",
+      "David showed incredible growth during his time with us. His eagerness to learn and adapt to new technologies made him stand out. A true team player with a solid understanding of full-stack development!",
     rating: 5,
     color: "bg-playful-green",
   },
   {
     id: 4,
-    name: "Ana Garcia",
-    role: "UX Designer @ Cryptomex",
+    name: "José Manuel Cuello Royo",
+    role: "Full Stack Developer",
     content:
-      "David has an excellent eye for UI/UX. He not only implements designs flawlessly but also provides valuable feedback that improves the final product.",
+      "David has an excellent eye for both frontend and backend architecture. He not only implements features flawlessly but also provides valuable technical insights that improve the overall product quality.",
     rating: 5,
     color: "bg-playful-purple",
   },
