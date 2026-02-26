@@ -59,6 +59,7 @@ export function VideoIntroSection() {
         >
           <h2 className="text-4xl md:text-5xl font-serif mb-4">Meet David</h2>
           <p className="text-xl text-muted-foreground">Get to know me better through this quick introduction!</p>
+          <a href="/David_Elias_Palacio_CV-1.pdf" download onClick={() => playSound("success")}> this video is outdated but here you can see my english</a>
         </motion.div>
 
         {/* Video container */}
