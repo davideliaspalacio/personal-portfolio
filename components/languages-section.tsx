@@ -15,7 +15,7 @@ const languages = [
   },
   {
     name: "English",
-    level: "B2+ Certified",
+    level: "C1",
     description: "Speaking & Writing certified",
     flag: "EN",
     color: "bg-playful-blue",

@@ -44,7 +44,7 @@ export function ContactSection() {
     setIsSubmitting(true)
     setError(null)
     playSound("whoosh")
-    
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -53,13 +53,13 @@ export function ContactSection() {
         },
         body: JSON.stringify(formData),
       })
-      
+
       const data = await response.json()
-      
+
       if (!response.ok) {
         throw new Error(data.error || 'Something went wrong')
       }
-      
+
       setSubmitted(true)
       playSound("woohoo")
       setFormData({ name: "", email: "", message: "" })
@@ -131,9 +131,8 @@ export function ContactSection() {
               <Input
                 type="text"
                 placeholder="What should I call you?"
-                className={`w-full text-lg py-6 px-6 rounded-2xl border-3 transition-all duration-300 ${
-                  focusedField === "name" ? "border-playful-blue bg-playful-blue/10" : "border-foreground/30 bg-card"
-                }`}
+                className={`w-full text-lg py-6 px-6 rounded-2xl border-3 transition-all duration-300 ${focusedField === "name" ? "border-playful-blue bg-playful-blue/10" : "border-foreground/30 bg-card"
+                  }`}
                 onFocus={() => handleFocus("name")}
                 onBlur={() => setFocusedField(null)}
                 value={formData.name}
@@ -151,9 +150,8 @@ export function ContactSection() {
               <Input
                 type="email"
                 placeholder="Where can I reach you?"
-                className={`w-full text-lg py-6 px-6 rounded-2xl border-3 transition-all duration-300 ${
-                  focusedField === "email" ? "border-playful-red bg-playful-red/10" : "border-foreground/30 bg-card"
-                }`}
+                className={`w-full text-lg py-6 px-6 rounded-2xl border-3 transition-all duration-300 ${focusedField === "email" ? "border-playful-red bg-playful-red/10" : "border-foreground/30 bg-card"
+                  }`}
                 onFocus={() => handleFocus("email")}
                 onBlur={() => setFocusedField(null)}
                 value={formData.email}
@@ -173,11 +171,10 @@ export function ContactSection() {
               <Textarea
                 placeholder="Tell me about your awesome idea..."
                 rows={5}
-                className={`w-full text-lg py-4 px-6 rounded-2xl border-3 transition-all duration-300 resize-none ${
-                  focusedField === "message"
+                className={`w-full text-lg py-4 px-6 rounded-2xl border-3 transition-all duration-300 resize-none ${focusedField === "message"
                     ? "border-playful-green bg-playful-green/10"
                     : "border-foreground/30 bg-card"
-                }`}
+                  }`}
                 onFocus={() => handleFocus("message")}
                 onBlur={() => setFocusedField(null)}
                 value={formData.message}
@@ -226,7 +223,7 @@ export function ContactSection() {
               </a>
             ))}
           </div>
-          
+
           {/* Download CV Button */}
           <a
             href="/David_Elias_Palacio_CV (1).pdf"

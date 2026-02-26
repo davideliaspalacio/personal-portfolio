@@ -6,11 +6,11 @@ import { CodeIcon, CoffeeIcon, HeartIcon, RocketIcon, GlobeIcon, BlockchainIcon 
 import { useSound } from "@/lib/sounds"
 
 const aboutItems = [
-  { Icon: CodeIcon, text: "2.5+ years building scalable web apps", color: "bg-playful-blue" },
+  { Icon: CodeIcon, text: "3+ years building scalable web apps", color: "bg-playful-blue" },
   { Icon: BlockchainIcon, text: "Web3 & Smart Contract integration", color: "bg-playful-purple" },
   { Icon: HeartIcon, text: "Clean architecture & long-term maintainability", color: "bg-playful-red" },
   { Icon: RocketIcon, text: "API integrations & n8n automation", color: "bg-playful-green" },
-  { Icon: GlobeIcon, text: "Spanish (Native) & English (B2+ Certified)", color: "bg-playful-orange" },
+  { Icon: GlobeIcon, text: "Spanish (Native) & English (C1 Certified)", color: "bg-playful-orange" },
   { Icon: CoffeeIcon, text: "Remote-first from Colombia", color: "bg-playful-yellow" },
 ]
 
@@ -52,7 +52,7 @@ export function AboutSection() {
 
         <div className="speech-bubble border-foreground bg-card mb-12">
           <p className="text-xl md:text-2xl leading-relaxed mb-4">
-            {"Software Engineer with"} <span className="text-playful-blue font-bold">2.5+ years of experience</span>{" "}
+            {"Software Engineer with"} <span className="text-playful-blue font-bold">3+ years of experience</span>{" "}
             building scalable, high-performance web applications using{" "}
             <span className="text-playful-red font-bold">React, Next.js, and TypeScript</span>.
           </p>

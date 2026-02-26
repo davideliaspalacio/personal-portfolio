@@ -118,7 +118,7 @@ export function HeroSection() {
         transition={{ delay: 0.6 }}
         className="text-xl md:text-2xl lg:text-3xl text-muted-foreground text-center max-w-3xl mb-8 text-balance"
       >
-        <span className="text-playful-blue font-bold">Frontend & Web3 Developer</span> with 2.5+ years building{" "}
+        <span className="text-playful-blue font-bold">Frontend & Web3 Developer</span> with 3+ years building{" "}
         <span className="text-playful-green font-bold">scalable</span>,{" "}
         <span className="text-playful-purple font-bold">high-performance</span> web applications
       </motion.p>
