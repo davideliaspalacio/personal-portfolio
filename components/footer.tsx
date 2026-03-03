@@ -4,8 +4,10 @@ import { motion } from "framer-motion"
 import { HeartIcon, ColombiaFlagIcon } from "./svg-icons"
 import { SocialLinks } from "./social-links"
 import { AvatarImage } from "./avatar-image"
+import { useTranslations } from "next-intl"
 
 export function Footer() {
+  const t = useTranslations("footer")
   const currentYear = new Date().getFullYear()
 
   return (
@@ -26,21 +28,21 @@ export function Footer() {
         {/* Bottom section */}
         <div className="text-center space-y-3">
           <p className="text-lg flex items-center justify-center gap-2 flex-wrap">
-            Made with
+            {t("madeWith")}
             <motion.span
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1 }}
             >
               <HeartIcon className="w-6 h-6 inline" />
             </motion.span>
-            in Colombia
+            {t("inColombia")}
             <ColombiaFlagIcon className="w-6 h-4 inline" />
           </p>
 
-          <p className="text-card/70">{currentYear} David Elias Palacio. All rights reserved.</p>
+          <p className="text-card/70">{t("allRights", { year: currentYear })}</p>
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-sm text-card/50">
-            Built with Next.js, Tailwind CSS & Framer Motion
+            {t("builtWith")}
           </motion.p>
         </div>
       </div>

@@ -4,43 +4,23 @@ import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { CoffeeIcon, CodeIcon, HeartIcon, RocketIcon } from "./svg-icons"
 import { useSound } from "@/lib/sounds"
+import { useTranslations } from "next-intl"
 
-const funFacts = [
-  {
-    icon: CoffeeIcon,
-    stat: "500+",
-    label: "Cups of coffee",
-    description: "Fueling late-night coding sessions",
-    color: "bg-playful-yellow",
-  },
-  {
-    icon: CodeIcon,
-    stat: "50k+",
-    label: "Lines of code",
-    description: "Written with love and TypeScript",
-    color: "bg-playful-blue",
-  },
-  {
-    icon: RocketIcon,
-    stat: "20+",
-    label: "Projects shipped",
-    description: "From idea to production",
-    color: "bg-playful-green",
-  },
-  {
-    icon: HeartIcon,
-    stat: "100%",
-    label: "Passion",
-    description: "For building great products",
-    color: "bg-playful-red",
-  },
-]
+const icons = [CoffeeIcon, CodeIcon, RocketIcon, HeartIcon]
+const colors = ["bg-playful-yellow", "bg-playful-blue", "bg-playful-green", "bg-playful-red"]
 
 export function FunFactsSection() {
+  const t = useTranslations("funFacts")
   const [isVisible, setIsVisible] = useState(false)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const sectionRef = useRef<HTMLElement>(null)
   const { playSound } = useSound()
+
+  const funFacts = (t.raw("items") as Array<{ stat: string; label: string; description: string }>).map((item, index) => ({
+    ...item,
+    icon: icons[index],
+    color: colors[index],
+  }))
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -69,8 +49,8 @@ export function FunFactsSection() {
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-serif mb-2">Fun Facts</h2>
-          <p className="text-muted-foreground">Some numbers that tell my story</p>
+          <h2 className="text-3xl md:text-4xl font-serif mb-2">{t("title")}</h2>
+          <p className="text-muted-foreground">{t("subtitle")}</p>
         </motion.div>
 
         {/* Stats grid */}

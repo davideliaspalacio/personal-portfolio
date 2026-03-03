@@ -4,68 +4,45 @@ import { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { CryptomexIcon, BlumerIcon, VirtualTecIcon, ExternalLinkIcon } from "./svg-icons"
 import { useSound } from "@/lib/sounds"
+import { useTranslations } from "next-intl"
 
-const experiences = [
+const experienceConfig = [
   {
-    company: "Cryptomex",
-    role: "Software Engineer (Frontend / Web3)",
-    period: "Jun 2024 - Present",
-    duration: "1 yr 8 mos",
-    location: "Remote",
-    type: "Full-time",
     color: "bg-playful-yellow",
     Icon: CryptomexIcon,
     website: "https://cryptomex.com",
-    highlights: [
-      "Owned the development and evolution of a production Web3 platform, applying clean code principles and scalable frontend architecture using React, Next.js, and TypeScript.",
-      "Designed and integrated multiple third-party services and APIs within a Web3-driven architecture, supporting high-volume payment flows and smart contract-based features.",
-      "Led frontend architecture and performance improvements, reducing bottlenecks and improving application speed, reliability, and maintainability.",
-      "Collaborated closely with product, backend, and blockchain teams to deliver customer-facing features used daily in production.",
-      "Actively contributed to UI/UX improvements, ensuring accessible, intuitive, and high-performance user interfaces.",
-      "Identified technical risks early and delivered production-ready solutions with a strong focus on scalability and long-term maintainability.",
-    ],
   },
   {
-    company: "Virtual Tec",
-    role: "Full-Stack Software Engineer",
-    period: "Feb 2024 - Jun 2024",
-    duration: "5 mos",
-    location: "Barranquilla, Remote",
-    type: "Full-time",
     color: "bg-playful-blue",
     Icon: VirtualTecIcon,
-    highlights: [
-      "Built and delivered full-stack features using React and TypeScript, integrating frontend interfaces with backend services and REST APIs.",
-      "Acted as a bridge between frontend and backend teams, ensuring smooth API integration and consistent data flow.",
-      "Worked closely with clients and stakeholders to translate business requirements into scalable technical solutions.",
-      "Supported deployment and operation of cloud-based services, contributing to system reliability and scalability.",
-      "Took ownership of features from requirement definition through development, testing, and production release.",
-    ],
   },
   {
-    company: "Somos Blumer",
-    role: "Junior Software Engineer",
-    period: "Jan 2023 - Oct 2023",
-    duration: "10 mos",
-    location: "Barranquilla, On-site",
-    type: "Full-time",
     color: "bg-playful-green",
     Icon: BlumerIcon,
-    highlights: [
-      "Strengthened foundations in frontend and backend development through hands-on training and real project contributions.",
-      "Assisted in the development and maintenance of application features under the guidance of senior engineers.",
-      "Participated in debugging, testing, and code reviews to improve code quality and reliability.",
-      "Collaborated closely with team members to understand system architecture, workflows, and best development practices.",
-      "Quickly adopted new technologies and tools, demonstrating a strong learning mindset and adaptability.",
-    ],
   },
 ]
 
 export function ExperienceSection() {
+  const t = useTranslations("experience")
+  const companies = t.raw("companies") as Array<{
+    name: string
+    role: string
+    period: string
+    duration: string
+    location: string
+    type: string
+    highlights: string[]
+    visitCompany?: string
+  }>
   const [isVisible, setIsVisible] = useState(false)
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
   const sectionRef = useRef<HTMLElement>(null)
   const { playSound } = useSound()
+
+  const experiences = companies.map((company, index) => ({
+    ...company,
+    ...experienceConfig[index],
+  }))
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -106,8 +83,8 @@ export function ExperienceSection() {
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-serif mb-4">Work Experience</h2>
-          <p className="text-xl text-muted-foreground">My professional journey so far</p>
+          <h2 className="text-4xl md:text-5xl font-serif mb-4">{t("title")}</h2>
+          <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
         </motion.div>
 
         {/* Timeline */}
@@ -207,7 +184,7 @@ export function ExperienceSection() {
                                   className="inline-flex items-center gap-2 mt-4 bg-foreground text-card px-4 py-2 rounded-full font-bold"
                                 >
                                   <ExternalLinkIcon className="w-4 h-4" />
-                                  Visit Company
+                                  {exp.visitCompany || t("companies.0.visitCompany")}
                                 </motion.a>
                               )}
                             </div>
@@ -216,7 +193,7 @@ export function ExperienceSection() {
                       </AnimatePresence>
 
                       <p className="text-sm text-foreground/60 mt-3">
-                        {expandedIndex === index ? "Click to collapse" : "Click to see details"}
+                        {expandedIndex === index ? t("clickToCollapse") : t("clickToExpand")}
                       </p>
                     </div>
                   </div>

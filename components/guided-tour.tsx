@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion"
 import { PointerIcon, ArrowRightIcon, CloseIcon } from "./svg-icons"
 import { AvatarImage } from "./avatar-image"
 import { useSound } from "@/lib/sounds"
+import { useTranslations } from "next-intl"
+import { LanguageSwitcher } from "./language-switcher"
 
 interface TourStep {
   target: string
@@ -13,70 +15,33 @@ interface TourStep {
   position: "top" | "bottom" | "left" | "right"
 }
 
-const tourSteps: TourStep[] = [
-  {
-    target: "hero",
-    title: "Welcome to my Portfolio!",
-    description: "Hey! I'm David  Elias Palacio, a Frontend & Web3 Developer from Colombia. Let me show you around!",
-    position: "bottom",
-  },
-  {
-    target: "about",
-    title: "About Me",
-    description: "Here you can learn more about my background, interests, and what drives me as a developer.",
-    position: "top",
-  },
-  {
-    target: "video-intro",
-    title: "Video Introduction",
-    description: "Watch a quick video where I introduce myself and talk about my passion for development!",
-    position: "top",
-  },
-  {
-    target: "journey",
-    title: "My Journey",
-    description: "Follow my career path from curious beginner to professional Frontend & Web3 developer.",
-    position: "bottom",
-  },
-  {
-    target: "skills",
-    title: "My Tech Stack",
-    description: "These are the technologies I work with daily. Hover over them to see my proficiency level!",
-    position: "top",
-  },
-  {
-    target: "experience",
-    title: "Work Experience",
-    description:
-      "I've worked at amazing companies like Cryptomex, Virtual Tec, and Somos Blumer. Click to expand and see details!",
-    position: "top",
-  },
-  {
-    target: "projects",
-    title: "Featured Projects",
-    description: "Check out some of the cool projects I've built. Click on any card to see more details!",
-    position: "top",
-  },
-  {
-    target: "testimonials",
-    title: "What People Say",
-    description: "Read testimonials from colleagues and clients I've had the pleasure of working with.",
-    position: "top",
-  },
-  {
-    target: "contact",
-    title: "Let's Connect!",
-    description: "Want to work together? Drop me a message here or connect with me on LinkedIn!",
-    position: "top",
-  },
-]
+const stepTargets = [
+  { target: "hero", position: "bottom" },
+  { target: "about", position: "top" },
+  { target: "video-intro", position: "top" },
+  { target: "journey", position: "bottom" },
+  { target: "skills", position: "top" },
+  { target: "experience", position: "top" },
+  { target: "projects", position: "top" },
+  { target: "testimonials", position: "top" },
+  { target: "contact", position: "top" },
+] as const
 
 export function GuidedTour() {
+  const t = useTranslations("guidedTour")
   const [isActive, setIsActive] = useState(false)
   const [currentStep, setCurrentStep] = useState(0)
   const [showWelcome, setShowWelcome] = useState(true)
   const [targetRect, setTargetRect] = useState<DOMRect | null>(null)
   const { playSound } = useSound()
+
+  // Get translated tour steps
+  const tourSteps: TourStep[] = (t.raw("steps") as Array<{ title: string; description: string }>).map((step, index) => ({
+    target: stepTargets[index].target,
+    title: step.title,
+    description: step.description,
+    position: stepTargets[index].position,
+  }))
 
   const updateTargetPosition = useCallback(() => {
     if (!isActive) return
@@ -198,10 +163,18 @@ export function GuidedTour() {
               <AvatarImage className="w-20 h-20 md:w-32 md:h-32 mx-auto mb-3 md:mb-4 rounded-full" size={128} />
             </motion.div>
 
-            <h2 className="text-2xl md:text-3xl font-serif mb-1 md:mb-2">Hey there! 👋</h2>
+            <h2 className="text-2xl md:text-3xl font-serif mb-1 md:mb-2">{t("welcome.greeting")}</h2>
             <p className="text-base md:text-lg text-muted-foreground mb-4 md:mb-6">
-              Welcome to my portfolio! Would you like a quick tour?
+              {t("welcome.message")}
             </p>
+
+            {/* Language selector */}
+            <div className="mb-4 md:mb-6">
+              <p className="text-sm text-muted-foreground mb-2 text-center">
+                {t("welcome.selectLanguage")}
+              </p>
+              <LanguageSwitcher variant="compact" />
+            </div>
 
             <div className="flex flex-col gap-2 md:gap-3 justify-center">
               <motion.button
@@ -210,7 +183,7 @@ export function GuidedTour() {
                 onClick={startTour}
                 className="bg-playful-blue text-foreground px-5 md:px-6 py-2.5 md:py-3 rounded-full border-2 md:border-3 border-foreground font-bold text-base md:text-lg w-full"
               >
-                ✨ Yes, show me around!
+                {t("welcome.startTour")}
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -218,7 +191,7 @@ export function GuidedTour() {
                 onClick={skipTour}
                 className="bg-secondary text-foreground px-5 md:px-6 py-2.5 md:py-3 rounded-full border-2 md:border-3 border-foreground font-bold text-sm md:text-base w-full"
               >
-                {"I'll explore myself"}
+                {t("welcome.skipTour")}
               </motion.button>
             </div>
           </motion.div>

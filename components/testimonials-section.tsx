@@ -4,53 +4,35 @@ import { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { QuoteIcon, StarIcon } from "./svg-icons"
 import { useSound } from "@/lib/sounds"
+import { useTranslations } from "next-intl"
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Heric Olier",
-    role: "Frontend Lead",
-    content:
-      "David is an exceptional frontend developer. His attention to detail and ability to create pixel-perfect interfaces is impressive. He quickly became a key player in our Web3 platform development.",
-    rating: 5,
-    color: "bg-playful-yellow",
-  },
-  {
-    id: 2,
-    name: "Danilo Ibáñez",
-    role: "Web3 Developer",
-    content:
-      "Working with David on Web3 integrations was a pleasure. He has a great ability to translate complex blockchain requirements into seamless user experiences and always delivers high-quality work on time.",
-    rating: 5,
-    color: "bg-playful-blue",
-  },
-  {
-    id: 3,
-    name: "Diego Barona",
-    role: "Backend Developer",
-    content:
-      "David showed incredible growth during his time with us. His eagerness to learn and adapt to new technologies made him stand out. A true team player with a solid understanding of full-stack development!",
-    rating: 5,
-    color: "bg-playful-green",
-  },
-  {
-    id: 4,
-    name: "José Manuel Cuello Royo",
-    role: "Full Stack Developer",
-    content:
-      "David has an excellent eye for both frontend and backend architecture. He not only implements features flawlessly but also provides valuable technical insights that improve the overall product quality.",
-    rating: 5,
-    color: "bg-playful-purple",
-  },
+const testimonialColors = [
+  { color: "bg-playful-yellow" },
+  { color: "bg-playful-blue" },
+  { color: "bg-playful-green" },
+  { color: "bg-playful-purple" },
 ]
 
 export function TestimonialsSection() {
+  const t = useTranslations("testimonials")
+  const testimonialItems = t.raw("items") as Array<{
+    name: string
+    role: string
+    content: string
+  }>
   const [isVisible, setIsVisible] = useState(false)
   const [isInViewport, setIsInViewport] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
   const sectionRef = useRef<HTMLElement>(null)
   const { playSound } = useSound()
   const hasPlayedEntrySound = useRef(false)
+
+  const testimonials = testimonialItems.map((item, index) => ({
+    id: index + 1,
+    ...item,
+    rating: 5,
+    ...testimonialColors[index],
+  }))
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -107,10 +89,10 @@ export function TestimonialsSection() {
         >
           <div className="flex items-center justify-center gap-4 mb-4">
             <QuoteIcon className="w-10 h-10 text-playful-yellow" />
-            <h2 className="text-4xl md:text-5xl font-serif">What People Say</h2>
+            <h2 className="text-4xl md:text-5xl font-serif">{t("title")}</h2>
             <QuoteIcon className="w-10 h-10 text-playful-yellow transform scale-x-[-1]" />
           </div>
-          <p className="text-xl text-muted-foreground">Feedback from colleagues and clients</p>
+          <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
         </motion.div>
 
         {/* Testimonials carousel */}

@@ -51,11 +51,11 @@ import {
   V0Icon,
 } from "./svg-icons"
 import { useSound } from "@/lib/sounds"
+import { useTranslations } from "next-intl"
 
 const skillCategories = [
   {
     id: "frontend",
-    name: "Frontend",
     color: "bg-playful-blue",
     lightColor: "bg-playful-blue/20",
     borderColor: "border-playful-blue",
@@ -73,7 +73,6 @@ const skillCategories = [
   },
   {
     id: "backend",
-    name: "Backend",
     color: "bg-playful-green",
     lightColor: "bg-playful-green/20",
     borderColor: "border-playful-green",
@@ -94,7 +93,6 @@ const skillCategories = [
   },
   {
     id: "blockchain",
-    name: "Blockchain / Web3",
     color: "bg-playful-purple",
     lightColor: "bg-playful-purple/20",
     borderColor: "border-playful-purple",
@@ -114,7 +112,6 @@ const skillCategories = [
   },
   {
     id: "tools",
-    name: "Tools & AI",
     color: "bg-playful-orange",
     lightColor: "bg-playful-orange/20",
     borderColor: "border-playful-orange",
@@ -139,6 +136,7 @@ const skillCategories = [
 ]
 
 export function SkillsSection() {
+  const t = useTranslations("skills")
   const [isVisible, setIsVisible] = useState(false)
   const [activeCategory, setActiveCategory] = useState("frontend") // Default to frontend
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null)
@@ -200,7 +198,7 @@ export function SkillsSection() {
           <svg viewBox="0 0 24 24" className="w-10 h-10 text-playful-yellow" fill="currentColor">
             <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z" />
           </svg>
-          <h2 className="text-4xl md:text-5xl font-sans text-center">My Superpowers</h2>
+          <h2 className="text-4xl md:text-5xl font-sans text-center">{t("title")}</h2>
           <svg viewBox="0 0 24 24" className="w-10 h-10 text-playful-blue animate-pulse" fill="currentColor">
             <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z" />
           </svg>
@@ -243,8 +241,8 @@ export function SkillsSection() {
                         })()}
                     </div>
                     <div>
-                      <h3 className="text-xl md:text-2xl font-sans font-bold">{category.name}</h3>
-                      <p className="text-sm opacity-70 font-sans">{category.skills.length} skills</p>
+                      <h3 className="text-xl md:text-2xl font-sans font-bold">{t(`categories.${category.id}`)}</h3>
+                      <p className="text-sm opacity-70 font-sans">{t("skillCount", { count: category.skills.length })}</p>
                     </div>
                   </div>
 
@@ -333,7 +331,7 @@ export function SkillsSection() {
                                 {!("hideYears" in category && category.hideYears) && skill.years && (
                                   <div className="mt-1 px-2 py-0.5 bg-foreground/10 rounded-full">
                                     <span className="text-[10px] md:text-xs font-sans font-medium opacity-70">
-                                      {skill.years} years
+                                      {skill.years} {t("badges.years")}
                                     </span>
                                   </div>
                                 )}
@@ -347,8 +345,8 @@ export function SkillsSection() {
                                   }`}>
                                     <span className="text-[9px] md:text-[10px] font-sans font-medium leading-tight">
                                       {"realExperience" in skill && skill.realExperience
-                                        ? "🚀 Learning + Products"
-                                        : "📖 Learning"}
+                                        ? t("badges.building")
+                                        : t("badges.learning")}
                                     </span>
                                   </div>
                                 )}
@@ -369,11 +367,11 @@ export function SkillsSection() {
                                         : "bg-playful-red"
                                     }`}
                                   >
-                                    {"learning" in skill && skill.learning 
+                                    {"learning" in skill && skill.learning
                                       ? "realExperience" in skill && skill.realExperience
-                                        ? "Building! 🔨"
-                                        : "Learning 📚" 
-                                      : "Pro!"}
+                                        ? t("badges.building")
+                                        : t("badges.learning")
+                                      : t("badges.pro")}
                                   </motion.div>
                                 )}
                               </AnimatePresence>
@@ -397,9 +395,9 @@ export function SkillsSection() {
           transition={{ delay: 0.5 }}
         >
           <div className="inline-block bg-background border-3 border-foreground rounded-2xl p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-            <p className="text-lg font-sans font-medium mb-4">My focus is always on</p>
+            <p className="text-lg font-sans font-medium mb-4">{t("footer.focus")}</p>
             <div className="flex flex-wrap justify-center gap-3">
-              {["Clean Architecture", "Scalability", "Reliability", "Long-term Maintainability"].map((item, i) => (
+              {["cleanArchitecture", "scalability", "reliability", "maintainability"].map((item, i) => (
                 <motion.span
                   key={item}
                   className="px-4 py-2 bg-playful-yellow rounded-full border-2 border-foreground font-sans font-bold text-sm"
@@ -407,7 +405,7 @@ export function SkillsSection() {
                   animate={isVisible ? { opacity: 1, scale: 1 } : {}}
                   transition={{ delay: 0.6 + i * 0.1, type: "spring" }}
                 >
-                  {item}
+                  {t(`footer.${item}`)}
                 </motion.span>
               ))}
             </div>

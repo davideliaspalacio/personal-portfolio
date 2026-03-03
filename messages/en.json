@@ -1,0 +1,407 @@
+{
+  "metadata": {
+    "title": "David Palacio | Frontend & Web3 Developer",
+    "description": "Frontend & Web3 Developer from Colombia. Building modern, interactive web experiences with React, Next.js, and blockchain technologies."
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "journey": "Journey",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "reviews": "Reviews",
+    "contact": "Contact"
+  },
+  "guidedTour": {
+    "welcome": {
+      "greeting": "Hey there! 👋",
+      "message": "Welcome to my portfolio! Would you like a quick tour?",
+      "selectLanguage": "Select your language:",
+      "startTour": "✨ Yes, show me around!",
+      "skipTour": "I'll explore myself"
+    },
+    "steps": [
+      {
+        "title": "Welcome to my Portfolio!",
+        "description": "Hey! I'm David  Elias Palacio, a Frontend & Web3 Developer from Colombia. Let me show you around!"
+      },
+      {
+        "title": "About Me",
+        "description": "Here you can learn more about my background, interests, and what drives me as a developer."
+      },
+      {
+        "title": "Video Introduction",
+        "description": "Watch a quick video where I introduce myself and talk about my passion for development!"
+      },
+      {
+        "title": "My Journey",
+        "description": "Follow my career path from curious beginner to professional Frontend & Web3 developer."
+      },
+      {
+        "title": "My Tech Stack",
+        "description": "These are the technologies I work with daily. Hover over them to see my proficiency level!"
+      },
+      {
+        "title": "Work Experience",
+        "description": "I've worked at amazing companies like Cryptomex, Virtual Tec, and Somos Blumer. Click to expand and see details!"
+      },
+      {
+        "title": "Featured Projects",
+        "description": "Check out some of the cool projects I've built. Click on any card to see more details!"
+      },
+      {
+        "title": "What People Say",
+        "description": "Read testimonials from colleagues and clients I've had the pleasure of working with."
+      },
+      {
+        "title": "Let's Connect!",
+        "description": "Want to work together? Drop me a message here or connect with me on LinkedIn!"
+      }
+    ]
+  },
+  "hero": {
+    "greeting": "Hey! I'm David Elias Palacio",
+    "role": "Frontend & Web3 Developer",
+    "description": "with 3+ years building",
+    "scalable": "scalable",
+    "highPerformance": "high-performance",
+    "webApplications": "web applications",
+    "seeMyWork": "See my work",
+    "downloadCV": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "intro": "Software Engineer with",
+    "experience": "3+ years of experience",
+    "buildingScalable": "building scalable, high-performance web applications using",
+    "technologies": "React, Next.js, and TypeScript",
+    "coreDevelopment": "I've been part of the core development team since the early stages, contributing to the initial architecture of a",
+    "multiTenant": "multi-tenant production platform",
+    "transactions": "that processes millions of dollars in monthly transaction volume.",
+    "handsOn": "I also have hands-on experience with backend and platform work, including",
+    "apiIntegrations": "API integrations",
+    "automation": "automation workflows using",
+    "aiTools": "and the development of",
+    "aiPowered": "AI-powered internal tools",
+    "items": {
+      "experience": "3+ years building scalable web apps",
+      "web3": "Web3 & Smart Contract integration",
+      "architecture": "Clean architecture & long-term maintainability",
+      "automation": "API integrations & n8n automation",
+      "languages": "Spanish (Native) & English (C1)",
+      "remote": "Remote-first from Colombia"
+    }
+  },
+  "experience": {
+    "title": "Work Experience",
+    "subtitle": "My professional journey so far",
+    "clickToExpand": "Click to see details",
+    "clickToCollapse": "Click to collapse",
+    "companies": [
+      {
+        "name": "Cryptomex",
+        "role": "Software Engineer (Frontend / Web3)",
+        "period": "Jun 2024 - Present",
+        "duration": "1 yr 8 mos",
+        "location": "Remote",
+        "type": "Full-time",
+        "highlights": [
+          "Owned the development and evolution of a production Web3 platform, applying clean code principles and scalable frontend architecture using React, Next.js, and TypeScript.",
+          "Designed and integrated multiple third-party services and APIs within a Web3-driven architecture, supporting high-volume payment flows and smart contract-based features.",
+          "Led frontend architecture and performance improvements, reducing bottlenecks and improving application speed, reliability, and maintainability.",
+          "Collaborated closely with product, backend, and blockchain teams to deliver customer-facing features used daily in production.",
+          "Actively contributed to UI/UX improvements, ensuring accessible, intuitive, and high-performance user interfaces.",
+          "Identified technical risks early and delivered production-ready solutions with a strong focus on scalability and long-term maintainability."
+        ],
+        "visitCompany": "Visit Company"
+      },
+      {
+        "name": "Virtual Tec",
+        "role": "Full-Stack Software Engineer",
+        "period": "Feb 2024 - Jun 2024",
+        "duration": "5 mos",
+        "location": "Barranquilla, Remote",
+        "type": "",
+        "highlights": [
+          "Built and delivered full-stack features using React and TypeScript, integrating frontend interfaces with backend services and REST APIs.",
+          "Acted as a bridge between frontend and backend teams, ensuring smooth API integration and consistent data flow.",
+          "Worked closely with clients and stakeholders to translate business requirements into scalable technical solutions.",
+          "Supported deployment and operation of cloud-based services, contributing to system reliability and scalability.",
+          "Took ownership of features from requirement definition through development, testing, and production release."
+        ]
+      },
+      {
+        "name": "Somos Blumer",
+        "role": "Junior Software Engineer",
+        "period": "Jan 2023 - Oct 2023",
+        "duration": "10 mos",
+        "location": "Barranquilla, On-site",
+        "type": "",
+        "highlights": [
+          "Strengthened foundations in frontend and backend development through hands-on training and real project contributions.",
+          "Assisted in the development and maintenance of application features under the guidance of senior engineers.",
+          "Participated in debugging, testing, and code reviews to improve code quality and reliability.",
+          "Collaborated closely with team members to understand system architecture, workflows, and best development practices.",
+          "Quickly adopted new technologies and tools, demonstrating a strong learning mindset and adaptability."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Things I've Built",
+    "subtitle": "Click on a sticker to learn more!",
+    "modalTitle": "Want to see this project?",
+    "modalSubtitle": "Contact me for a live demo or to discuss the code!",
+    "contactButton": "Contact Me to See This Project",
+    "items": [
+      {
+        "title": "E-commerce Platform",
+        "shortDescription": "Scalable full-stack e-commerce solution for businesses with inventory management, online payments, and admin dashboard.",
+        "fullDescription": "A complete e-commerce platform built with a modern tech stack. Frontend built with Next.js and TypeScript for a fast, SEO-optimized shopping experience. Backend powered by NestJS with PostgreSQL for robust data management. Features include: real-time inventory tracking, multiple payment gateway integrations, order management, admin dashboard, and scalable architecture ready for enterprise use.",
+        "tags": ["TypeScript", "Next.js", "NestJS", "PostgreSQL"]
+      },
+      {
+        "title": "License Plate Recognition API",
+        "shortDescription": "Real-time license plate detection and recognition system using computer vision and deep learning.",
+        "fullDescription": "An AI-powered API for real-time license plate recognition. Built with Python, OpenCV for image processing, and TensorFlow for deep learning models. The system can detect and read license plates from images and video streams with high accuracy. Deployed as a REST API for easy integration with existing systems like parking management, toll systems, and security applications.",
+        "tags": ["Python", "OpenCV", "TensorFlow", "REST API"],
+        "year": "2023"
+      },
+      {
+        "title": "Face Recognition System",
+        "shortDescription": "AI-powered facial recognition system for identity verification and access control applications.",
+        "fullDescription": "A facial recognition system built with Python and deep learning technologies. Implements face detection, feature extraction, and identity matching for security and access control applications. Features include real-time face detection, face encoding database, and identity verification API. Built with OpenCV, dlib, and Flask for the web interface.",
+        "tags": ["Python", "Deep Learning", "OpenCV", "Flask"],
+        "year": "2023"
+      },
+      {
+        "title": "Cross-Platform App",
+        "shortDescription": "Mobile and web application with shared codebase, REST API integration, and offline support.",
+        "fullDescription": "A cross-platform application delivering pixel-perfect UI across mobile and web. Features offline-first architecture with local data persistence, seamless REST API integration, and real-time sync. Delivered as MVP and iterated based on user feedback to improve UX metrics by 35%.",
+        "tags": ["React Native", "FlutterFlow", "APIs"]
+      }
+    ]
+  },
+  "skills": {
+    "title": "My Superpowers",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "blockchain": "Blockchain / Web3",
+      "tools": "Tools & AI"
+    },
+    "badges": {
+      "years": "years",
+      "learning": "Learning 📚",
+      "building": "Building! 🔨",
+      "pro": "Pro!"
+    },
+    "skillCount": "{count} skills",
+    "footer": {
+      "focus": "My focus is always on",
+      "cleanArchitecture": "Clean Architecture",
+      "scalability": "Scalability",
+      "reliability": "Reliability",
+      "maintainability": "Long-term Maintainability"
+    }
+  },
+  "testimonials": {
+    "title": "What People Say",
+    "subtitle": "Feedback from colleagues and clients",
+    "items": [
+      {
+        "name": "Heric Olier",
+        "role": "Frontend Lead",
+        "content": "David is an exceptional frontend developer. His attention to detail and ability to create pixel-perfect interfaces is impressive. He quickly became a key player in our Web3 platform development."
+      },
+      {
+        "name": "Danilo Ibáñez",
+        "role": "Web3 Developer",
+        "content": "Working with David on Web3 integrations was a pleasure. He has a great ability to translate complex blockchain requirements into seamless user experiences and always delivers high-quality work on time."
+      },
+      {
+        "name": "Diego Barona",
+        "role": "Backend Developer",
+        "content": "David showed incredible growth during his time with us. His eagerness to learn and adapt to new technologies made him stand out. A true team player with a solid understanding of full-stack development!"
+      },
+      {
+        "name": "José Manuel Cuello Royo",
+        "role": "Full Stack Developer",
+        "content": "David has an excellent eye for both frontend and backend architecture. He not only implements features flawlessly but also provides valuable technical insights that improve the overall product quality."
+      }
+    ]
+  },
+  "education": {
+    "title": "Education & Certifications",
+    "subtitle": "My academic background and continuous learning",
+    "currentlyStudying": "📚 Currently Studying",
+    "university": {
+      "institution": "Universidad Simón Bolívar",
+      "field": "Data Science",
+      "period": "2025 - Present",
+      "location": "Barranquilla, Colombia",
+      "highlights": [
+        "Learning Python, R, and SQL for data analysis and manipulation",
+        "Studying algorithms, data structures, and programming fundamentals",
+        "Applying statistical methods and machine learning concepts",
+        "Building data-driven projects with real-world datasets"
+      ]
+    },
+    "certificationsTitle": "Certifications",
+    "certifications": [
+      {
+        "name": "React - The Complete Guide",
+        "issuer": "Udemy - Maximilian Schwarzmüller",
+        "year": "2023"
+      },
+      {
+        "name": "Next.js & React - Complete Guide",
+        "issuer": "Udemy - Maximilian Schwarzmüller",
+        "year": "2023"
+      },
+      {
+        "name": "TypeScript: The Complete Developer's Guide",
+        "issuer": "Udemy - Stephen Grider",
+        "year": "2023"
+      },
+      {
+        "name": "Advanced CSS and Sass",
+        "issuer": "Udemy - Jonas Schmedtmann",
+        "year": "2023"
+      },
+      {
+        "name": "JavaScript: The Advanced Concepts",
+        "issuer": "Udemy - Andrei Neagoie",
+        "year": "2022"
+      },
+      {
+        "name": "Testing React with Jest and Testing Library",
+        "issuer": "Udemy - Bonnie Schulkin",
+        "year": "2024"
+      },
+      {
+        "name": "Web3 & Blockchain Development",
+        "issuer": "Alchemy University",
+        "year": "2024"
+      },
+      {
+        "name": "NestJS: The Complete Developer's Guide",
+        "issuer": "Udemy - Stephen Grider",
+        "year": "2024"
+      }
+    ]
+  },
+  "journey": {
+    "title": "My Journey",
+    "subtitle": "From curious beginner to professional developer",
+    "clickToRead": "Click to read more...",
+    "steps": [
+      {
+        "year": "2022",
+        "title": "The Beginning",
+        "description": "Started my journey in software development, diving deep into HTML, CSS, and JavaScript. Built my first projects and fell in love with creating interactive web experiences."
+      },
+      {
+        "year": "2023",
+        "title": "First Professional Role",
+        "description": "Joined Somos Blumer as a Junior Software Engineer in Barranquilla. Strengthened my foundations through hands-on training, learned from senior engineers, and contributed to real projects."
+      },
+      {
+        "year": "2024",
+        "title": "Full-Stack Growth",
+        "description": "Moved to Virtual Tec as a Full-Stack Engineer. Built features using React and TypeScript, acted as bridge between frontend and backend teams, and worked directly with clients."
+      },
+      {
+        "year": "2024-Now",
+        "title": "Frontend & Web3 Developer",
+        "description": "Currently at Cryptomex as a Frontend/Web3 Developer. Building interfaces, integrating blockchain technologies, and contributing to a platform that processes millions in transactions."
+      }
+    ]
+  },
+  "videoIntro": {
+    "title": "Meet David",
+    "subtitle": "Get to know me better through this quick introduction!",
+    "outdatedNotice": "this video is outdated but here you can see my english",
+    "clickToPlay": "Click to play introduction",
+    "facts": [
+      "2+ years of experience",
+      "Frontend & Web3 Specialist",
+      "Based in Colombia",
+      "React Enthusiast",
+      "Clean Code Advocate",
+      "UI/UX Passionate",
+      "TypeScript Expert",
+      "Always Learning"
+    ]
+  },
+  "funFacts": {
+    "title": "Fun Facts",
+    "subtitle": "Some numbers that tell my story",
+    "items": [
+      {
+        "stat": "500+",
+        "label": "Cups of coffee",
+        "description": "Fueling late-night coding sessions"
+      },
+      {
+        "stat": "50k+",
+        "label": "Lines of code",
+        "description": "Written with love and TypeScript"
+      },
+      {
+        "stat": "20+",
+        "label": "Projects shipped",
+        "description": "From idea to production"
+      },
+      {
+        "stat": "100%",
+        "label": "Passion",
+        "description": "For building great products"
+      }
+    ]
+  },
+  "languages": {
+    "title": "Languages",
+    "items": [
+      {
+        "name": "Spanish",
+        "level": "Native",
+        "description": "Lengua materna"
+      },
+      {
+        "name": "English",
+        "level": "C1",
+        "description": "Speaking & Writing certified"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's build something fun together",
+    "subtitle": "Got an idea? Want to collaborate? Just want to say hi? Drop me a message!",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "What should I call you?",
+      "email": "Your Email",
+      "emailPlaceholder": "Where can I reach you?",
+      "message": "Your Message",
+      "messagePlaceholder": "Tell me about your awesome idea...",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    },
+    "success": {
+      "title": "Message Sent!",
+      "message": "Thanks for reaching out! I'll get back to you super soon."
+    },
+    "socialText": "Or find me on the interwebs:",
+    "downloadCV": "Download my CV"
+  },
+  "footer": {
+    "madeWith": "Made with",
+    "and": "and lots of",
+    "by": "by David Elias Palacio",
+    "inColombia": "in Colombia",
+    "allRights": "{year} David Elias Palacio. All rights reserved.",
+    "builtWith": "Built with Next.js, Tailwind CSS & Framer Motion"
+  }
+}

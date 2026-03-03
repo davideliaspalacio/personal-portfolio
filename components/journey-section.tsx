@@ -4,47 +4,28 @@ import { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { TimelineIcon, RocketIcon, CodeIcon, BlockchainIcon, StarIcon } from "./svg-icons"
 import { useSound } from "@/lib/sounds"
+import { useTranslations } from "next-intl"
 
-const journeySteps = [
-  {
-    year: "2022",
-    title: "The Beginning",
-    description:
-      "Started my journey in software development, diving deep into HTML, CSS, and JavaScript. Built my first projects and fell in love with creating interactive web experiences.",
-    icon: CodeIcon,
-    color: "bg-playful-blue",
-  },
-  {
-    year: "2023",
-    title: "First Professional Role",
-    description:
-      "Joined Somos Blumer as a Junior Software Engineer in Barranquilla. Strengthened my foundations through hands-on training, learned from senior engineers, and contributed to real projects.",
-    icon: RocketIcon,
-    color: "bg-playful-green",
-  },
-  {
-    year: "2024",
-    title: "Full-Stack Growth",
-    description:
-      "Moved to Virtual Tec as a Full-Stack Engineer. Built features using React and TypeScript, acted as bridge between frontend and backend teams, and worked directly with clients.",
-    icon: StarIcon,
-    color: "bg-playful-yellow",
-  },
-  {
-    year: "2024-Now",
-    title: "Frontend & Web3 Developer",
-    description:
-      "Currently at Cryptomex as a Frontend/Web3 Developer. Building interfaces, integrating blockchain technologies, and contributing to a platform that processes millions in transactions.",
-    icon: BlockchainIcon,
-    color: "bg-playful-purple",
-  },
-]
+const journeyIcons = [CodeIcon, RocketIcon, StarIcon, BlockchainIcon]
+const journeyColors = ["bg-playful-blue", "bg-playful-green", "bg-playful-yellow", "bg-playful-purple"]
 
 export function JourneySection() {
+  const t = useTranslations("journey")
+  const journeyItems = t.raw("steps") as Array<{
+    year: string
+    title: string
+    description: string
+  }>
   const [isVisible, setIsVisible] = useState(false)
   const [activeStep, setActiveStep] = useState(0)
   const sectionRef = useRef<HTMLElement>(null)
   const { playSound } = useSound()
+
+  const journeySteps = journeyItems.map((item, index) => ({
+    ...item,
+    icon: journeyIcons[index],
+    color: journeyColors[index],
+  }))
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -80,9 +61,9 @@ export function JourneySection() {
         >
           <div className="flex items-center justify-center gap-4 mb-4">
             <TimelineIcon className="w-12 h-12 text-playful-purple" />
-            <h2 className="text-4xl md:text-5xl font-serif">My Journey</h2>
+            <h2 className="text-4xl md:text-5xl font-serif">{t("title")}</h2>
           </div>
-          <p className="text-xl text-muted-foreground">From curious beginner to professional developer</p>
+          <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
         </motion.div>
 
         {/* Timeline */}
@@ -131,7 +112,7 @@ export function JourneySection() {
                       </motion.p>
                     )}
                   </AnimatePresence>
-                  {activeStep !== index && <p className="text-sm text-muted-foreground">Click to read more...</p>}
+                  {activeStep !== index && <p className="text-sm text-muted-foreground">{t("clickToRead")}</p>}
                 </motion.div>
               </div>
             </motion.div>

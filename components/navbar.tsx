@@ -4,24 +4,23 @@ import { useState, useEffect } from "react"
 import { Volume2, VolumeX } from "lucide-react"
 import { useSound } from "@/lib/sounds"
 import { useSoundContext } from "@/lib/sound-context"
+import { useTranslations } from "next-intl"
+import { LanguageSwitcher } from "./language-switcher"
 
-const navItems = [
-  { id: "hero", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "journey", label: "Journey" },
-  { id: "skills", label: "Skills" },
-  { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" },
-  { id: "testimonials", label: "Reviews" },
-  { id: "contact", label: "Contact" },
-]
+const navItemIds = ["hero", "about", "journey", "skills", "experience", "projects", "testimonials", "contact"] as const
 
 export function Navbar() {
+  const t = useTranslations("navbar")
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState("hero")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { playSound } = useSound()
   const { soundEnabled, toggleSound } = useSoundContext()
+
+  const navItems = navItemIds.map((id) => ({
+    id,
+    label: t(id),
+  }))
 
   useEffect(() => {
     const handleScroll = () => {
@@ -119,6 +118,11 @@ export function Navbar() {
                   <VolumeX className="w-4 h-4" />
                 )}
               </button>
+
+              {/* Language Switcher */}
+              <div className="ml-2">
+                <LanguageSwitcher variant="default" />
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
@@ -189,6 +193,11 @@ export function Navbar() {
               </>
             )}
           </button>
+
+          {/* Language Switcher - Mobile */}
+          <div className="mt-3">
+            <LanguageSwitcher variant="compact" />
+          </div>
         </div>
       </div>
     </>

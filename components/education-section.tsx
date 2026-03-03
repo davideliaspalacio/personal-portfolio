@@ -3,79 +3,49 @@
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { useSound } from "@/lib/sounds"
+import { useTranslations } from "next-intl"
 
-const education = [
-  {
-    institution: "Universidad Simón Bolívar",
-    status: "📚 Currently Studying",
-    field: "Data Science",
-    period: "2025 - Present",
-    location: "Barranquilla, Colombia",
-    color: "bg-playful-blue",
-    highlights: [
-      "Learning Python, R, and SQL for data analysis and manipulation",
-      "Studying algorithms, data structures, and programming fundamentals",
-      "Applying statistical methods and machine learning concepts",
-      "Building data-driven projects with real-world datasets",
-    ],
-  },
-]
-
-const certifications = [
-  {
-    name: "React - The Complete Guide",
-    issuer: "Udemy - Maximilian Schwarzmüller",
-    year: "2023",
-    color: "bg-playful-blue",
-  },
-  {
-    name: "Next.js & React - Complete Guide",
-    issuer: "Udemy - Maximilian Schwarzmüller",
-    year: "2023",
-    color: "bg-playful-purple",
-  },
-  {
-    name: "TypeScript: The Complete Developer's Guide",
-    issuer: "Udemy - Stephen Grider",
-    year: "2023",
-    color: "bg-playful-green",
-  },
-  {
-    name: "Advanced CSS and Sass",
-    issuer: "Udemy - Jonas Schmedtmann",
-    year: "2023",
-    color: "bg-playful-yellow",
-  },
-  {
-    name: "JavaScript: The Advanced Concepts",
-    issuer: "Udemy - Andrei Neagoie",
-    year: "2022",
-    color: "bg-playful-orange",
-  },
-  {
-    name: "Testing React with Jest and Testing Library",
-    issuer: "Udemy - Bonnie Schulkin",
-    year: "2024",
-    color: "bg-playful-red",
-  },
-  {
-    name: "Web3 & Blockchain Development",
-    issuer: "Alchemy University",
-    year: "2024",
-    color: "bg-playful-purple",
-  },
-  {
-    name: "NestJS: The Complete Developer's Guide",
-    issuer: "Udemy - Stephen Grider",
-    year: "2024",
-    color: "bg-playful-green",
-  },
+const certificationColors = [
+  "bg-playful-blue",
+  "bg-playful-purple",
+  "bg-playful-green",
+  "bg-playful-yellow",
+  "bg-playful-orange",
+  "bg-playful-red",
+  "bg-playful-purple",
+  "bg-playful-green",
 ]
 
 export function EducationSection() {
+  const t = useTranslations("education")
+  const university = t.raw("university") as {
+    institution: string
+    field: string
+    period: string
+    location: string
+    highlights: string[]
+  }
+  const certificationItems = t.raw("certifications") as Array<{
+    name: string
+    issuer: string
+    year: string
+  }>
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
   const { playSound } = useSound()
+
+  const education = [
+    {
+      ...university,
+      status: t("currentlyStudying"),
+      color: "bg-playful-blue",
+    },
+  ]
+
+  const certifications = certificationItems.map((cert, index) => ({
+    ...cert,
+    color: certificationColors[index],
+  }))
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -106,8 +76,8 @@ export function EducationSection() {
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-serif mb-4">Education & Certifications</h2>
-          <p className="text-xl text-muted-foreground">My academic background and continuous learning</p>
+          <h2 className="text-4xl md:text-5xl font-serif mb-4">{t("title")}</h2>
+          <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
         </motion.div>
 
         {/* Education */}
@@ -152,7 +122,7 @@ export function EducationSection() {
 
         {/* Certifications */}
         <motion.div initial={{ opacity: 0 }} animate={isVisible ? { opacity: 1 } : {}} transition={{ delay: 0.4 }}>
-          <h3 className="text-2xl font-serif text-center mb-6">Certifications</h3>
+          <h3 className="text-2xl font-serif text-center mb-6">{t("certificationsTitle")}</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {certifications.map((cert, index) => (
               <motion.div

@@ -5,58 +5,50 @@ import { X, MessageCircle, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { CodeIcon, RocketIcon, GlobeIcon, BriefcaseIcon } from "./svg-icons"
 import { useSound } from "@/lib/sounds"
+import { useTranslations } from "next-intl"
 
-const projects = [
+const projectConfig = [
   {
-    title: "E-commerce Platform",
-    description:
-      "Scalable full-stack e-commerce solution for businesses with inventory management, online payments, and admin dashboard.",
-    tags: ["TypeScript", "Next.js", "NestJS", "PostgreSQL"],
     color: "bg-playful-blue",
     rotation: "-rotate-2",
     Icon: BriefcaseIcon,
-    fullDescription:
-      "A complete e-commerce platform built with a modern tech stack. Frontend built with Next.js and TypeScript for a fast, SEO-optimized shopping experience. Backend powered by NestJS with PostgreSQL for robust data management. Features include: real-time inventory tracking, multiple payment gateway integrations, order management, admin dashboard, and scalable architecture ready for enterprise use.",
   },
   {
-    title: "License Plate Recognition API",
-    description: "Real-time license plate detection and recognition system using computer vision and deep learning.",
-    tags: ["Python", "OpenCV", "TensorFlow", "REST API"],
     color: "bg-playful-green",
     rotation: "rotate-1",
     Icon: CodeIcon,
-    year: "2023",
-    fullDescription:
-      "An AI-powered API for real-time license plate recognition. Built with Python, OpenCV for image processing, and TensorFlow for deep learning models. The system can detect and read license plates from images and video streams with high accuracy. Deployed as a REST API for easy integration with existing systems like parking management, toll systems, and security applications.",
   },
   {
-    title: "Face Recognition System",
-    description: "AI-powered facial recognition system for identity verification and access control applications.",
-    tags: ["Python", "Deep Learning", "OpenCV", "Flask"],
     color: "bg-playful-purple",
     rotation: "-rotate-1",
     Icon: RocketIcon,
-    year: "2023",
-    fullDescription:
-      "A facial recognition system built with Python and deep learning technologies. Implements face detection, feature extraction, and identity matching for security and access control applications. Features include real-time face detection, face encoding database, and identity verification API. Built with OpenCV, dlib, and Flask for the web interface.",
   },
   {
-    title: "Cross-Platform App",
-    description: "Mobile and web application with shared codebase, REST API integration, and offline support.",
-    tags: ["React Native", "FlutterFlow", "APIs"],
     color: "bg-playful-orange",
     rotation: "rotate-2",
     Icon: GlobeIcon,
-    fullDescription:
-      "A cross-platform application delivering pixel-perfect UI across mobile and web. Features offline-first architecture with local data persistence, seamless REST API integration, and real-time sync. Delivered as MVP and iterated based on user feedback to improve UX metrics by 35%.",
   },
 ]
 
 export function ProjectsSection() {
+  const t = useTranslations("projects")
+  const projectItems = t.raw("items") as Array<{
+    title: string
+    shortDescription: string
+    fullDescription: string
+    tags: string[]
+    year?: string
+  }>
   const [isVisible, setIsVisible] = useState(false)
-  const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null)
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null)
   const sectionRef = useRef<HTMLElement>(null)
   const { playSound } = useSound()
+
+  const projects = projectItems.map((item, index) => ({
+    ...item,
+    description: item.shortDescription,
+    ...projectConfig[index],
+  }))
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -96,12 +88,12 @@ export function ProjectsSection() {
         {/* Section title */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif mb-4">
-            {"Things I've Built"}{" "}
+            {t("title")}{" "}
             <span className="inline-block animate-bounce-soft">
               <RocketIcon className="w-10 h-10 inline-block" />
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground">Click on a sticker to learn more!</p>
+          <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
         </div>
 
         {/* Projects grid */}
@@ -199,8 +191,8 @@ export function ProjectsSection() {
                   <MessageCircle className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="font-bold text-foreground">Want to see this project?</p>
-                  <p className="text-sm text-foreground/70">Contact me for a live demo or to discuss the code!</p>
+                  <p className="font-bold text-foreground">{t("modalTitle")}</p>
+                  <p className="text-sm text-foreground/70">{t("modalSubtitle")}</p>
                 </div>
               </div>
             </div>
@@ -219,7 +211,7 @@ export function ProjectsSection() {
               }}
             >
               <Mail className="w-5 h-5 mr-2" />
-              Contact Me to See This Project
+              {t("contactButton")}
             </Button>
           </div>
         </div>

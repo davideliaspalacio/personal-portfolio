@@ -5,8 +5,10 @@ import { motion } from "framer-motion"
 import { PlayIcon } from "./svg-icons"
 import { AvatarImage } from "./avatar-image"
 import { useSound } from "@/lib/sounds"
+import { useTranslations } from "next-intl"
 
 export function VideoIntroSection() {
+  const t = useTranslations("videoIntro")
   const [isVisible, setIsVisible] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
@@ -57,9 +59,9 @@ export function VideoIntroSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-serif mb-4">Meet David</h2>
-          <p className="text-xl text-muted-foreground">Get to know me better through this quick introduction!</p>
-          <a href="/David_Elias_Palacio_CV-1.pdf" download onClick={() => playSound("success")}> this video is outdated but here you can see my english</a>
+          <h2 className="text-4xl md:text-5xl font-serif mb-4">{t("title")}</h2>
+          <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
+          <a href="/David_Elias_Palacio_CV-1.pdf" download onClick={() => playSound("success")}> {t("outdatedNotice")}</a>
         </motion.div>
 
         {/* Video container */}
@@ -100,7 +102,7 @@ export function VideoIntroSection() {
                   </div>
                 </motion.button>
 
-                <p className="mt-4 text-lg font-bold text-foreground/80">Click to play introduction</p>
+                <p className="mt-4 text-lg font-bold text-foreground/80">{t("clickToPlay")}</p>
               </div>
             ) : (
               // Video player
@@ -140,16 +142,7 @@ export function VideoIntroSection() {
           className="mt-12 overflow-hidden"
         >
           <div className="flex gap-8 animate-marquee">
-            {[
-              "2+ years of experience",
-              "Frontend & Web3 Specialist",
-              "Based in Colombia",
-              "React Enthusiast",
-              "Clean Code Advocate",
-              "UI/UX Passionate",
-              "TypeScript Expert",
-              "Always Learning",
-            ].map((fact, i) => (
+            {(t.raw("facts") as string[]).map((fact, i) => (
               <div
                 key={i}
                 className="flex-shrink-0 bg-playful-yellow px-6 py-3 rounded-full border-3 border-foreground font-bold whitespace-nowrap"

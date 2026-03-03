@@ -1,0 +1,407 @@
+{
+  "metadata": {
+    "title": "David Palacio | Desarrollador Frontend & Web3",
+    "description": "Desarrollador Frontend & Web3 de Colombia. Construyendo experiencias web modernas e interactivas con React, Next.js y tecnologías blockchain."
+  },
+  "navbar": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "journey": "Trayectoria",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "reviews": "Reseñas",
+    "contact": "Contacto"
+  },
+  "guidedTour": {
+    "welcome": {
+      "greeting": "¡Hola! 👋",
+      "message": "¡Bienvenido a mi portafolio! ¿Te gustaría un tour rápido?",
+      "selectLanguage": "Selecciona tu idioma:",
+      "startTour": "✨ ¡Sí, muéstrame!",
+      "skipTour": "Exploraré por mi cuenta"
+    },
+    "steps": [
+      {
+        "title": "¡Bienvenido a mi Portafolio!",
+        "description": "¡Hola! Soy David Elias Palacio, un Desarrollador Frontend & Web3 de Colombia. ¡Déjame mostrarte el lugar!"
+      },
+      {
+        "title": "Sobre mí",
+        "description": "Aquí puedes conocer más sobre mi trayectoria, intereses y lo que me motiva como desarrollador."
+      },
+      {
+        "title": "Video de Presentación",
+        "description": "¡Mira un video rápido donde me presento y hablo sobre mi pasión por el desarrollo!"
+      },
+      {
+        "title": "Mi Trayectoria",
+        "description": "Sigue mi camino profesional desde principiante curioso hasta desarrollador profesional Frontend & Web3."
+      },
+      {
+        "title": "Mi Stack Tecnológico",
+        "description": "Estas son las tecnologías con las que trabajo diariamente. ¡Pasa el cursor sobre ellas para ver mi nivel de dominio!"
+      },
+      {
+        "title": "Experiencia Laboral",
+        "description": "He trabajado en empresas increíbles como Cryptomex, Virtual Tec y Somos Blumer. ¡Haz clic para expandir y ver los detalles!"
+      },
+      {
+        "title": "Proyectos Destacados",
+        "description": "Echa un vistazo a algunos de los proyectos interesantes que he construido. ¡Haz clic en cualquier tarjeta para ver más detalles!"
+      },
+      {
+        "title": "Lo que Dice la Gente",
+        "description": "Lee testimonios de colegas y clientes con los que he tenido el placer de trabajar."
+      },
+      {
+        "title": "¡Conectemos!",
+        "description": "¿Quieres trabajar juntos? ¡Envíame un mensaje aquí o conéctate conmigo en LinkedIn!"
+      }
+    ]
+  },
+  "hero": {
+    "greeting": "¡Hola! Soy David Elias Palacio",
+    "role": "Desarrollador Frontend & Web3",
+    "description": "con más de 3 años construyendo",
+    "scalable": "escalables",
+    "highPerformance": "alto rendimiento",
+    "webApplications": "aplicaciones web de",
+    "seeMyWork": "Ver mi trabajo",
+    "downloadCV": "Descargar CV"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "intro": "Ingeniero de Software con",
+    "experience": "más de 3 años de experiencia",
+    "buildingScalable": "construyendo aplicaciones web escalables y de alto rendimiento usando",
+    "technologies": "React, Next.js y TypeScript",
+    "coreDevelopment": "He sido parte del equipo de desarrollo principal desde las primeras etapas, contribuyendo a la arquitectura inicial de una",
+    "multiTenant": "plataforma de producción multi-tenant",
+    "transactions": "que procesa millones de dólares en volumen de transacciones mensuales.",
+    "handsOn": "También tengo experiencia práctica con trabajo de backend y plataforma, incluyendo",
+    "apiIntegrations": "integraciones de API",
+    "automation": "flujos de automatización usando",
+    "aiTools": "y el desarrollo de",
+    "aiPowered": "herramientas internas impulsadas por IA",
+    "items": {
+      "experience": "Más de 3 años construyendo apps web escalables",
+      "web3": "Integración Web3 & Smart Contracts",
+      "architecture": "Arquitectura limpia y mantenibilidad a largo plazo",
+      "automation": "Integraciones de API y automatización con n8n",
+      "languages": "Español (Nativo) e Inglés (C1)",
+      "remote": "Trabajo remoto desde Colombia"
+    }
+  },
+  "experience": {
+    "title": "Experiencia Laboral",
+    "subtitle": "Mi trayectoria profesional hasta ahora",
+    "clickToExpand": "Haz clic para ver detalles",
+    "clickToCollapse": "Haz clic para colapsar",
+    "companies": [
+      {
+        "name": "Cryptomex",
+        "role": "Ingeniero de Software (Frontend / Web3)",
+        "period": "Jun 2024 - Presente",
+        "duration": "1 año 8 meses",
+        "location": "Remoto",
+        "type": "Tiempo completo",
+        "highlights": [
+          "Lideré el desarrollo y evolución de una plataforma Web3 en producción, aplicando principios de código limpio y arquitectura frontend escalable usando React, Next.js y TypeScript.",
+          "Diseñé e integré múltiples servicios y APIs de terceros dentro de una arquitectura impulsada por Web3, soportando flujos de pago de alto volumen y funcionalidades basadas en contratos inteligentes.",
+          "Lideré mejoras de arquitectura frontend y rendimiento, reduciendo cuellos de botella y mejorando la velocidad, confiabilidad y mantenibilidad de la aplicación.",
+          "Colaboré estrechamente con los equipos de producto, backend y blockchain para entregar funcionalidades de cara al cliente utilizadas diariamente en producción.",
+          "Contribuí activamente a mejoras de UI/UX, asegurando interfaces accesibles, intuitivas y de alto rendimiento.",
+          "Identifiqué riesgos técnicos tempranamente y entregué soluciones listas para producción con un fuerte enfoque en escalabilidad y mantenibilidad a largo plazo."
+        ],
+        "visitCompany": "Visitar Empresa"
+      },
+      {
+        "name": "Virtual Tec",
+        "role": "Ingeniero de Software Full-Stack",
+        "period": "Feb 2024 - Jun 2024",
+        "duration": "5 meses",
+        "location": "Barranquilla, Remoto",
+        "type": "",
+        "highlights": [
+          "Construí y entregué funcionalidades full-stack usando React y TypeScript, integrando interfaces frontend con servicios backend y APIs REST.",
+          "Actué como puente entre los equipos frontend y backend, asegurando una integración fluida de APIs y un flujo de datos consistente.",
+          "Trabajé estrechamente con clientes y stakeholders para traducir requisitos de negocio en soluciones técnicas escalables.",
+          "Apoyé el despliegue y operación de servicios basados en la nube, contribuyendo a la confiabilidad y escalabilidad del sistema.",
+          "Asumí la responsabilidad de funcionalidades desde la definición de requisitos hasta el desarrollo, pruebas y lanzamiento en producción."
+        ]
+      },
+      {
+        "name": "Somos Blumer",
+        "role": "Ingeniero de Software Junior",
+        "period": "Ene 2023 - Oct 2023",
+        "duration": "10 meses",
+        "location": "Barranquilla, Presencial",
+        "type": "",
+        "highlights": [
+          "Fortalecí fundamentos en desarrollo frontend y backend a través de capacitación práctica y contribuciones a proyectos reales.",
+          "Asistí en el desarrollo y mantenimiento de funcionalidades de aplicación bajo la guía de ingenieros senior.",
+          "Participé en depuración, pruebas y revisiones de código para mejorar la calidad y confiabilidad del código.",
+          "Colaboré estrechamente con miembros del equipo para entender la arquitectura del sistema, flujos de trabajo y mejores prácticas de desarrollo.",
+          "Adopté rápidamente nuevas tecnologías y herramientas, demostrando una fuerte mentalidad de aprendizaje y adaptabilidad."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Cosas que he Construido",
+    "subtitle": "¡Haz clic en una tarjeta para aprender más!",
+    "modalTitle": "¿Quieres ver este proyecto?",
+    "modalSubtitle": "¡Contáctame para una demostración en vivo o para discutir el código!",
+    "contactButton": "Contáctame para Ver Este Proyecto",
+    "items": [
+      {
+        "title": "Plataforma E-commerce",
+        "shortDescription": "Solución e-commerce full-stack escalable para negocios con gestión de inventario, pagos en línea y panel de administración.",
+        "fullDescription": "Una plataforma e-commerce completa construida con un stack tecnológico moderno. Frontend construido con Next.js y TypeScript para una experiencia de compra rápida y optimizada para SEO. Backend impulsado por NestJS con PostgreSQL para una gestión robusta de datos. Las características incluyen: seguimiento de inventario en tiempo real, integraciones de múltiples pasarelas de pago, gestión de pedidos, panel de administración y arquitectura escalable lista para uso empresarial.",
+        "tags": ["TypeScript", "Next.js", "NestJS", "PostgreSQL"]
+      },
+      {
+        "title": "API de Reconocimiento de Placas",
+        "shortDescription": "Sistema de detección y reconocimiento de placas vehiculares en tiempo real usando visión por computadora y deep learning.",
+        "fullDescription": "Una API impulsada por IA para reconocimiento de placas en tiempo real. Construida con Python, OpenCV para procesamiento de imágenes y TensorFlow para modelos de deep learning. El sistema puede detectar y leer placas vehiculares desde imágenes y transmisiones de video con alta precisión. Desplegada como API REST para fácil integración con sistemas existentes como gestión de estacionamientos, sistemas de peaje y aplicaciones de seguridad.",
+        "tags": ["Python", "OpenCV", "TensorFlow", "REST API"],
+        "year": "2023"
+      },
+      {
+        "title": "Sistema de Reconocimiento Facial",
+        "shortDescription": "Sistema de reconocimiento facial impulsado por IA para verificación de identidad y aplicaciones de control de acceso.",
+        "fullDescription": "Un sistema de reconocimiento facial construido con Python y tecnologías de deep learning. Implementa detección de rostros, extracción de características y coincidencia de identidad para aplicaciones de seguridad y control de acceso. Las características incluyen detección de rostros en tiempo real, base de datos de codificación facial y API de verificación de identidad. Construido con OpenCV, dlib y Flask para la interfaz web.",
+        "tags": ["Python", "Deep Learning", "OpenCV", "Flask"],
+        "year": "2023"
+      },
+      {
+        "title": "App Multiplataforma",
+        "shortDescription": "Aplicación móvil y web con código compartido, integración de API REST y soporte offline.",
+        "fullDescription": "Una aplicación multiplataforma que ofrece una UI perfecta en móvil y web. Características incluyen arquitectura offline-first con persistencia de datos local, integración perfecta de API REST y sincronización en tiempo real. Entregada como MVP e iterada basándose en feedback de usuarios para mejorar las métricas de UX en un 35%.",
+        "tags": ["React Native", "FlutterFlow", "APIs"]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Mis Superpoderes",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "blockchain": "Blockchain / Web3",
+      "tools": "Herramientas & IA"
+    },
+    "badges": {
+      "years": "años",
+      "learning": "Aprendiendo 📚",
+      "building": "¡Construyendo! 🔨",
+      "pro": "¡Pro!"
+    },
+    "skillCount": "{count} habilidades",
+    "footer": {
+      "focus": "Mi enfoque siempre está en",
+      "cleanArchitecture": "Arquitectura Limpia",
+      "scalability": "Escalabilidad",
+      "reliability": "Confiabilidad",
+      "maintainability": "Mantenibilidad a Largo Plazo"
+    }
+  },
+  "testimonials": {
+    "title": "Lo que Dice la Gente",
+    "subtitle": "Comentarios de colegas y clientes",
+    "items": [
+      {
+        "name": "Heric Olier",
+        "role": "Líder Frontend",
+        "content": "David es un desarrollador frontend excepcional. Su atención al detalle y capacidad para crear interfaces pixel-perfect es impresionante. Rápidamente se convirtió en un jugador clave en el desarrollo de nuestra plataforma Web3."
+      },
+      {
+        "name": "Danilo Ibáñez",
+        "role": "Desarrollador Web3",
+        "content": "Trabajar con David en integraciones Web3 fue un placer. Tiene una gran capacidad para traducir requisitos complejos de blockchain en experiencias de usuario fluidas y siempre entrega trabajo de alta calidad a tiempo."
+      },
+      {
+        "name": "Diego Barona",
+        "role": "Desarrollador Backend",
+        "content": "David mostró un crecimiento increíble durante su tiempo con nosotros. Su entusiasmo por aprender y adaptarse a nuevas tecnologías lo hizo destacar. ¡Un verdadero jugador de equipo con una sólida comprensión del desarrollo full-stack!"
+      },
+      {
+        "name": "José Manuel Cuello Royo",
+        "role": "Desarrollador Full Stack",
+        "content": "David tiene un excelente ojo tanto para la arquitectura frontend como backend. No solo implementa funcionalidades de manera impecable, sino que también proporciona valiosos insights técnicos que mejoran la calidad general del producto."
+      }
+    ]
+  },
+  "education": {
+    "title": "Educación y Certificaciones",
+    "subtitle": "Mi formación académica y aprendizaje continuo",
+    "currentlyStudying": "📚 Estudiando Actualmente",
+    "university": {
+      "institution": "Universidad Simón Bolívar",
+      "field": "Ciencia de Datos",
+      "period": "2025 - Presente",
+      "location": "Barranquilla, Colombia",
+      "highlights": [
+        "Aprendiendo Python, R y SQL para análisis y manipulación de datos",
+        "Estudiando algoritmos, estructuras de datos y fundamentos de programación",
+        "Aplicando métodos estadísticos y conceptos de machine learning",
+        "Construyendo proyectos basados en datos con conjuntos de datos del mundo real"
+      ]
+    },
+    "certificationsTitle": "Certificaciones",
+    "certifications": [
+      {
+        "name": "React - La Guía Completa",
+        "issuer": "Udemy - Maximilian Schwarzmüller",
+        "year": "2023"
+      },
+      {
+        "name": "Next.js & React - Guía Completa",
+        "issuer": "Udemy - Maximilian Schwarzmüller",
+        "year": "2023"
+      },
+      {
+        "name": "TypeScript: La Guía Completa del Desarrollador",
+        "issuer": "Udemy - Stephen Grider",
+        "year": "2023"
+      },
+      {
+        "name": "CSS y Sass Avanzado",
+        "issuer": "Udemy - Jonas Schmedtmann",
+        "year": "2023"
+      },
+      {
+        "name": "JavaScript: Los Conceptos Avanzados",
+        "issuer": "Udemy - Andrei Neagoie",
+        "year": "2022"
+      },
+      {
+        "name": "Testing React con Jest y Testing Library",
+        "issuer": "Udemy - Bonnie Schulkin",
+        "year": "2024"
+      },
+      {
+        "name": "Desarrollo Web3 & Blockchain",
+        "issuer": "Alchemy University",
+        "year": "2024"
+      },
+      {
+        "name": "NestJS: La Guía Completa del Desarrollador",
+        "issuer": "Udemy - Stephen Grider",
+        "year": "2024"
+      }
+    ]
+  },
+  "journey": {
+    "title": "Mi Trayectoria",
+    "subtitle": "De principiante curioso a desarrollador profesional",
+    "clickToRead": "Haz clic para leer más...",
+    "steps": [
+      {
+        "year": "2022",
+        "title": "El Comienzo",
+        "description": "Comencé mi viaje en el desarrollo de software, sumergiéndome en HTML, CSS y JavaScript. Construí mis primeros proyectos y me enamoré de crear experiencias web interactivas."
+      },
+      {
+        "year": "2023",
+        "title": "Primer Rol Profesional",
+        "description": "Me uní a Somos Blumer como Ingeniero de Software Junior en Barranquilla. Fortalecí mis fundamentos a través de capacitación práctica, aprendí de ingenieros senior y contribuí a proyectos reales."
+      },
+      {
+        "year": "2024",
+        "title": "Crecimiento Full-Stack",
+        "description": "Me mudé a Virtual Tec como Ingeniero Full-Stack. Construí funcionalidades usando React y TypeScript, actué como puente entre equipos frontend y backend, y trabajé directamente con clientes."
+      },
+      {
+        "year": "2024-Ahora",
+        "title": "Desarrollador Frontend & Web3",
+        "description": "Actualmente en Cryptomex como Desarrollador Frontend/Web3. Construyendo interfaces, integrando tecnologías blockchain y contribuyendo a una plataforma que procesa millones en transacciones."
+      }
+    ]
+  },
+  "videoIntro": {
+    "title": "Conoce a David",
+    "subtitle": "¡Conóceme mejor a través de esta presentación rápida!",
+    "outdatedNotice": "este video está desactualizado pero aquí puedes ver mi inglés",
+    "clickToPlay": "Haz clic para reproducir la presentación",
+    "facts": [
+      "Más de 2 años de experiencia",
+      "Especialista Frontend & Web3",
+      "Ubicado en Colombia",
+      "Entusiasta de React",
+      "Defensor del Código Limpio",
+      "Apasionado por UI/UX",
+      "Experto en TypeScript",
+      "Siempre Aprendiendo"
+    ]
+  },
+  "funFacts": {
+    "title": "Datos Curiosos",
+    "subtitle": "Algunos números que cuentan mi historia",
+    "items": [
+      {
+        "stat": "500+",
+        "label": "Tazas de café",
+        "description": "Alimentando sesiones de código nocturnas"
+      },
+      {
+        "stat": "50k+",
+        "label": "Líneas de código",
+        "description": "Escritas con amor y TypeScript"
+      },
+      {
+        "stat": "20+",
+        "label": "Proyectos entregados",
+        "description": "De la idea a producción"
+      },
+      {
+        "stat": "100%",
+        "label": "Pasión",
+        "description": "Por construir grandes productos"
+      }
+    ]
+  },
+  "languages": {
+    "title": "Idiomas",
+    "items": [
+      {
+        "name": "Español",
+        "level": "Nativo",
+        "description": "Lengua materna"
+      },
+      {
+        "name": "Inglés",
+        "level": "C1",
+        "description": "Speaking & Writing certificado"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Construyamos algo increíble juntos",
+    "subtitle": "¿Tienes una idea? ¿Quieres colaborar? ¿Solo quieres saludar? ¡Envíame un mensaje!",
+    "form": {
+      "name": "Tu Nombre",
+      "namePlaceholder": "¿Cómo debo llamarte?",
+      "email": "Tu Email",
+      "emailPlaceholder": "¿Dónde puedo contactarte?",
+      "message": "Tu Mensaje",
+      "messagePlaceholder": "Cuéntame sobre tu idea increíble...",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando..."
+    },
+    "success": {
+      "title": "¡Mensaje Enviado!",
+      "message": "¡Gracias por escribir! Te responderé muy pronto."
+    },
+    "socialText": "O encuéntrame en internet:",
+    "downloadCV": "Descargar mi CV"
+  },
+  "footer": {
+    "madeWith": "Hecho con",
+    "and": "y mucho",
+    "by": "por David Elias Palacio",
+    "inColombia": "en Colombia",
+    "allRights": "{year} David Elias Palacio. Todos los derechos reservados.",
+    "builtWith": "Construido con Next.js, Tailwind CSS & Framer Motion"
+  }
+}

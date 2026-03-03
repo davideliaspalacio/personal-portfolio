@@ -4,28 +4,28 @@ import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { GlobeIcon, ColombiaFlagIcon } from "./svg-icons"
 import { useSound } from "@/lib/sounds"
+import { useTranslations } from "next-intl"
 
-const languages = [
-  {
-    name: "Spanish",
-    level: "Native",
-    description: "Lengua materna",
-    flag: "ES",
-    color: "bg-playful-yellow",
-  },
-  {
-    name: "English",
-    level: "C1",
-    description: "Speaking & Writing certified",
-    flag: "EN",
-    color: "bg-playful-blue",
-  },
+const languageConfig = [
+  { flag: "ES", color: "bg-playful-yellow" },
+  { flag: "EN", color: "bg-playful-blue" },
 ]
 
 export function LanguagesSection() {
+  const t = useTranslations("languages")
+  const languageItems = t.raw("items") as Array<{
+    name: string
+    level: string
+    description: string
+  }>
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
   const { playSound } = useSound()
+
+  const languages = languageItems.map((item, index) => ({
+    ...item,
+    ...languageConfig[index],
+  }))
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -55,7 +55,7 @@ export function LanguagesSection() {
           className="flex items-center justify-center gap-4 mb-12"
         >
           <GlobeIcon className="w-10 h-10" />
-          <h2 className="text-3xl md:text-4xl font-serif">Languages</h2>
+          <h2 className="text-3xl md:text-4xl font-serif">{t("title")}</h2>
         </motion.div>
 
         {/* Language cards */}

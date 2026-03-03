@@ -4,17 +4,19 @@ import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { CodeIcon, CoffeeIcon, HeartIcon, RocketIcon, GlobeIcon, BlockchainIcon } from "./svg-icons"
 import { useSound } from "@/lib/sounds"
+import { useTranslations } from "next-intl"
 
 const aboutItems = [
-  { Icon: CodeIcon, text: "3+ years building scalable web apps", color: "bg-playful-blue" },
-  { Icon: BlockchainIcon, text: "Web3 & Smart Contract integration", color: "bg-playful-purple" },
-  { Icon: HeartIcon, text: "Clean architecture & long-term maintainability", color: "bg-playful-red" },
-  { Icon: RocketIcon, text: "API integrations & n8n automation", color: "bg-playful-green" },
-  { Icon: GlobeIcon, text: "Spanish (Native) & English (C1)", color: "bg-playful-orange" },
-  { Icon: CoffeeIcon, text: "Remote-first from Colombia", color: "bg-playful-yellow" },
+  { Icon: CodeIcon, key: "experience", color: "bg-playful-blue" },
+  { Icon: BlockchainIcon, key: "web3", color: "bg-playful-purple" },
+  { Icon: HeartIcon, key: "architecture", color: "bg-playful-red" },
+  { Icon: RocketIcon, key: "automation", color: "bg-playful-green" },
+  { Icon: GlobeIcon, key: "languages", color: "bg-playful-orange" },
+  { Icon: CoffeeIcon, key: "remote", color: "bg-playful-yellow" },
 ]
 
 export function AboutSection() {
+  const t = useTranslations("about")
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
   const { playSound } = useSound()
@@ -46,28 +48,25 @@ export function AboutSection() {
         {/* Section title */}
         <div className="flex items-center gap-4 mb-12">
           <div className="w-16 h-1 bg-playful-red rounded-full" />
-          <h2 className="text-4xl md:text-5xl font-serif">About Me</h2>
+          <h2 className="text-4xl md:text-5xl font-serif">{t("title")}</h2>
           <div className="flex-1 h-1 bg-playful-red rounded-full" />
         </div>
 
         <div className="speech-bubble border-foreground bg-card mb-12">
           <p className="text-xl md:text-2xl leading-relaxed mb-4">
-            {"Software Engineer with"} <span className="text-playful-blue font-bold">3+ years of experience</span>{" "}
-            building scalable, high-performance web applications using{" "}
-            <span className="text-playful-red font-bold">React, Next.js, and TypeScript</span>.
+            {t("intro")} <span className="text-playful-blue font-bold">{t("experience")}</span>{" "}
+            {t("buildingScalable")}{" "}
+            <span className="text-playful-red font-bold">{t("technologies")}</span>.
           </p>
           <p className="text-lg md:text-xl leading-relaxed mb-4 text-muted-foreground">
-            {
-              "I've been part of the core development team since the early stages, contributing to the initial architecture of a"
-            }
-            <span className="text-playful-green font-bold"> multi-tenant production platform</span> that processes
-            millions of dollars in monthly transaction volume.
+            {t("coreDevelopment")}
+            <span className="text-playful-green font-bold"> {t("multiTenant")}</span> {t("transactions")}
           </p>
           <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
-            I also have hands-on experience with backend and platform work, including{" "}
-            <span className="text-playful-purple font-bold">API integrations</span>, automation workflows using{" "}
-            <span className="text-playful-orange font-bold">n8n</span>, and the development of{" "}
-            <span className="text-playful-blue font-bold">AI-powered internal tools</span>.
+            {t("handsOn")}{" "}
+            <span className="text-playful-purple font-bold">{t("apiIntegrations")}</span>, {t("automation")}{" "}
+            <span className="text-playful-orange font-bold">n8n</span>, {t("aiTools")}{" "}
+            <span className="text-playful-blue font-bold">{t("aiPowered")}</span>.
           </p>
         </div>
 
@@ -86,7 +85,7 @@ export function AboutSection() {
               <div className="w-14 h-14 rounded-full bg-card border-2 border-foreground flex items-center justify-center flex-shrink-0">
                 <item.Icon className="w-8 h-8" />
               </div>
-              <p className="text-lg md:text-xl text-foreground font-medium">{item.text}</p>
+              <p className="text-lg md:text-xl text-foreground font-medium">{t(`items.${item.key}`)}</p>
             </motion.div>
           ))}
         </div>

@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Send, Github, Linkedin, Mail, Download } from "lucide-react"
 import { RocketIcon, HeartIcon, CoffeeIcon } from "./svg-icons"
 import { useSound } from "@/lib/sounds"
+import { useTranslations } from "next-intl"
 
 const socials = [
   {
@@ -32,6 +33,7 @@ const socials = [
 ]
 
 export function ContactSection() {
+  const t = useTranslations("contact")
   const [focusedField, setFocusedField] = useState<string | null>(null)
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -84,13 +86,13 @@ export function ContactSection() {
         {/* Section title */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-serif mb-4">
-            {"Let's build something fun together"}{" "}
+            {t("title")}{" "}
             <span className="inline-block animate-bounce-soft">
               <RocketIcon className="w-10 h-10 inline-block" />
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            {"Got an idea? Want to collaborate? Just want to say hi? Drop me a message!"}
+            {t("subtitle")}
           </p>
         </div>
 
@@ -109,8 +111,8 @@ export function ContactSection() {
                 />
               </svg>
             </div>
-            <h3 className="text-3xl font-bold mb-2 text-foreground">Message Sent!</h3>
-            <p className="text-xl text-foreground/80">{"Thanks for reaching out! I'll get back to you super soon."}</p>
+            <h3 className="text-3xl font-bold mb-2 text-foreground">{t("success.title")}</h3>
+            <p className="text-xl text-foreground/80">{t("success.message")}</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -123,14 +125,14 @@ export function ContactSection() {
             {/* Name field */}
             <div className={`transition-all duration-300 ${focusedField === "name" ? "scale-[1.02]" : ""}`}>
               <label className="block text-lg mb-2 font-medium flex items-center gap-2">
-                Your Name
+                {t("form.name")}
                 <svg viewBox="0 0 24 24" className="w-5 h-5 text-playful-yellow" fill="currentColor">
                   <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z" />
                 </svg>
               </label>
               <Input
                 type="text"
-                placeholder="What should I call you?"
+                placeholder={t("form.namePlaceholder")}
                 className={`w-full text-lg py-6 px-6 rounded-2xl border-3 transition-all duration-300 ${focusedField === "name" ? "border-playful-blue bg-playful-blue/10" : "border-foreground/30 bg-card"
                   }`}
                 onFocus={() => handleFocus("name")}
@@ -144,12 +146,12 @@ export function ContactSection() {
             {/* Email field */}
             <div className={`transition-all duration-300 ${focusedField === "email" ? "scale-[1.02]" : ""}`}>
               <label className="block text-lg mb-2 font-medium flex items-center gap-2">
-                Your Email
+                {t("form.email")}
                 <Mail className="w-5 h-5 text-playful-red" />
               </label>
               <Input
                 type="email"
-                placeholder="Where can I reach you?"
+                placeholder={t("form.emailPlaceholder")}
                 className={`w-full text-lg py-6 px-6 rounded-2xl border-3 transition-all duration-300 ${focusedField === "email" ? "border-playful-red bg-playful-red/10" : "border-foreground/30 bg-card"
                   }`}
                 onFocus={() => handleFocus("email")}
@@ -163,13 +165,13 @@ export function ContactSection() {
             {/* Message field */}
             <div className={`transition-all duration-300 ${focusedField === "message" ? "scale-[1.02]" : ""}`}>
               <label className="block text-lg mb-2 font-medium flex items-center gap-2">
-                Your Message
+                {t("form.message")}
                 <svg viewBox="0 0 24 24" className="w-5 h-5 text-playful-green" fill="currentColor">
                   <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
                 </svg>
               </label>
               <Textarea
-                placeholder="Tell me about your awesome idea..."
+                placeholder={t("form.messagePlaceholder")}
                 rows={5}
                 className={`w-full text-lg py-4 px-6 rounded-2xl border-3 transition-all duration-300 resize-none ${focusedField === "message"
                     ? "border-playful-green bg-playful-green/10"
@@ -194,11 +196,11 @@ export function ContactSection() {
               {isSubmitting ? (
                 <span className="flex items-center gap-2">
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                  Sending...
+                  {t("form.sending")}
                 </span>
               ) : (
                 <span className="flex items-center gap-2">
-                  Send Message <Send className="w-5 h-5" />
+                  {t("form.submit")} <Send className="w-5 h-5" />
                 </span>
               )}
             </Button>
@@ -207,7 +209,7 @@ export function ContactSection() {
 
         {/* Social links */}
         <div className="mt-16 text-center">
-          <p className="text-lg text-muted-foreground mb-6">Or find me on the interwebs:</p>
+          <p className="text-lg text-muted-foreground mb-6">{t("socialText")}</p>
           <div className="flex justify-center gap-4 mb-8">
             {socials.map((social) => (
               <a
@@ -232,22 +234,8 @@ export function ContactSection() {
             className="inline-flex items-center gap-2 px-8 py-4 bg-playful-green hover:bg-playful-yellow text-foreground font-bold text-lg rounded-full border-3 border-foreground transition-all duration-300 hover:scale-105 hover:rotate-1 sticker"
           >
             <Download className="w-5 h-5" />
-            Download my CV
+            {t("downloadCV")}
           </a>
-        </div>
-
-        {/* Footer */}
-        <div className="mt-16 text-center text-muted-foreground">
-          <p className="text-lg flex items-center justify-center gap-2">
-            Made with <HeartIcon className="w-6 h-6" /> and lots of <CoffeeIcon className="w-6 h-6" /> by David Elias
-            Palacio
-          </p>
-          <p className="text-sm mt-2 flex items-center justify-center gap-2">
-            2026 All rights reserved. Have a great day!
-            <svg viewBox="0 0 24 24" className="w-4 h-4 text-playful-yellow" fill="currentColor">
-              <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z" />
-            </svg>
-          </p>
         </div>
       </div>
     </section>

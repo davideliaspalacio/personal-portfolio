@@ -17,6 +17,7 @@ import {
 } from "./svg-icons"
 import { AvatarImage } from "./avatar-image"
 import { useSound } from "@/lib/sounds"
+import { useTranslations } from "next-intl"
 
 const floatingTech = [
   { Icon: FloatingReactIcon, x: 8, y: 15, delay: 0, size: "w-12 h-12 md:w-16 md:h-16" },
@@ -28,6 +29,7 @@ const floatingTech = [
 ]
 
 export function HeroSection() {
+  const t = useTranslations("hero")
   const [isWaving, setIsWaving] = useState(false)
   const [mounted, setMounted] = useState(false)
   const { playSound } = useSound()
@@ -109,7 +111,7 @@ export function HeroSection() {
         transition={{ delay: 0.4 }}
         className="text-5xl md:text-7xl lg:text-8xl font-serif text-center mb-4 text-balance"
       >
-        {"Hey! I'm David Elias Palacio"}{" "}
+        {t("greeting")}{" "}
       </motion.h1>
 
       <motion.p
@@ -118,9 +120,9 @@ export function HeroSection() {
         transition={{ delay: 0.6 }}
         className="text-xl md:text-2xl lg:text-3xl text-muted-foreground text-center max-w-3xl mb-8 text-balance"
       >
-        <span className="text-playful-blue font-bold">Frontend & Web3 Developer</span> with 3+ years building{" "}
-        <span className="text-playful-green font-bold">scalable</span>,{" "}
-        <span className="text-playful-purple font-bold">high-performance</span> web applications
+        <span className="text-playful-blue font-bold">{t("role")}</span> {t("description")}{" "}
+        <span className="text-playful-green font-bold">{t("scalable")}</span>,{" "}
+        <span className="text-playful-purple font-bold">{t("highPerformance")}</span> {t("webApplications")}
       </motion.p>
 
       {/* Tech stack badges */}
@@ -158,10 +160,10 @@ export function HeroSection() {
           onClick={handleCTAClick}
           onMouseEnter={() => playSound("hover")}
         >
-          <span className="mr-2">See my work</span>
+          <span className="mr-2">{t("seeMyWork")}</span>
           <ArrowDown className="w-5 h-5 group-hover:animate-bounce" />
         </Button>
-        
+
         <Button
           size="lg"
           asChild
@@ -170,7 +172,7 @@ export function HeroSection() {
         >
           <a href="/David_Elias_Palacio_CV-1.pdf" download onClick={() => playSound("success")}>
             <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-            <span>Download CV</span>
+            <span>{t("downloadCV")}</span>
           </a>
         </Button>
       </motion.div>
