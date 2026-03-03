@@ -7,7 +7,7 @@ import { useSoundContext } from "@/lib/sound-context"
 import { useTranslations } from "next-intl"
 import { LanguageSwitcher } from "./language-switcher"
 
-const navItemIds = ["hero", "about", "journey", "skills", "experience", "projects", "testimonials", "contact"] as const
+const navItemIds = ["home", "about", "journey", "skills", "experience", "projects", "reviews", "contact"] as const
 
 export function Navbar() {
   const t = useTranslations("navbar")
