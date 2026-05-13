@@ -61,7 +61,7 @@ export function VideoIntroSection() {
         >
           <h2 className="text-4xl md:text-5xl font-serif mb-4">{t("title")}</h2>
           <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
-          <a href="/David_Elias_Palacio_CV-1.pdf" download onClick={() => playSound("success")}> {t("outdatedNotice")}</a>
+          <a href="/resumeee2.pdf" download onClick={() => playSound("success")}> {t("outdatedNotice")}</a>
         </motion.div>
 
         {/* Video container */}

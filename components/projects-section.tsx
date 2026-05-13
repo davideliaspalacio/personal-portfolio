@@ -1,9 +1,9 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { X, MessageCircle, Mail } from "lucide-react"
+import { X, MessageCircle, Mail, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { CodeIcon, RocketIcon, GlobeIcon, BriefcaseIcon } from "./svg-icons"
+import { CodeIcon, RocketIcon, GlobeIcon, VotoLocoIcon } from "./svg-icons"
 import { useSound } from "@/lib/sounds"
 import { useTranslations } from "next-intl"
 
@@ -11,7 +11,7 @@ const projectConfig = [
   {
     color: "bg-playful-blue",
     rotation: "-rotate-2",
-    Icon: BriefcaseIcon,
+    Icon: VotoLocoIcon,
   },
   {
     color: "bg-playful-green",
@@ -38,6 +38,8 @@ export function ProjectsSection() {
     fullDescription: string
     tags: string[]
     year?: string
+    link?: string
+    linkLabel?: string
   }>
   const [isVisible, setIsVisible] = useState(false)
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null)
@@ -97,7 +99,13 @@ export function ProjectsSection() {
         </div>
 
         {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          className={`grid gap-8 ${
+            projects.length === 1
+              ? "grid-cols-1 max-w-2xl mx-auto"
+              : "grid-cols-1 md:grid-cols-2"
+          }`}
+        >
           {projects.map((project, index) => (
             <div
               key={project.title}
@@ -149,28 +157,32 @@ export function ProjectsSection() {
           onClick={handleCloseModal}
         >
           <div
-            className={`${selectedProject.color} rounded-3xl p-8 max-w-lg w-full border-4 border-foreground animate-pop-in relative`}
+            className={`${selectedProject.color} rounded-3xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto border-4 border-foreground animate-pop-in relative`}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
             <button
               onClick={handleCloseModal}
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-card border-2 border-foreground flex items-center justify-center hover:scale-110 transition-transform"
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-card border-2 border-foreground flex items-center justify-center hover:scale-110 transition-transform z-10"
             >
               <X className="w-5 h-5" />
             </button>
 
             {/* Modal content */}
-            <div className="mb-4 flex items-start justify-between">
-              <selectedProject.Icon className="w-16 h-16" />
+            <div className="mb-4 flex items-start justify-between gap-4 pr-12">
+              <selectedProject.Icon className="w-20 h-20 flex-shrink-0" />
               {"year" in selectedProject && selectedProject.year && (
-                <span className="bg-card/90 text-foreground px-4 py-2 rounded-full text-sm border-2 border-foreground/50 font-bold">
+                <span className="bg-card/90 text-foreground px-4 py-2 rounded-full text-sm border-2 border-foreground/50 font-bold whitespace-nowrap">
                   📅 {selectedProject.year}
                 </span>
               )}
             </div>
             <h3 className="text-3xl font-bold mb-4 text-foreground">{selectedProject.title}</h3>
-            <p className="text-foreground/90 text-lg mb-6 leading-relaxed">{selectedProject.fullDescription}</p>
+            <div className="text-foreground/90 text-base md:text-lg mb-6 leading-relaxed space-y-3">
+              {selectedProject.fullDescription.split("\n\n").map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-6">
@@ -183,6 +195,24 @@ export function ProjectsSection() {
                 </span>
               ))}
             </div>
+
+            {/* Visit live site */}
+            {"link" in selectedProject && selectedProject.link && (
+              <Button
+                asChild
+                className="w-full mb-3 bg-foreground text-background hover:bg-foreground/90 rounded-full border-2 border-foreground py-6 text-lg font-bold"
+              >
+                <a
+                  href={selectedProject.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => playSound("whoosh")}
+                >
+                  <ExternalLink className="w-5 h-5 mr-2" />
+                  {selectedProject.linkLabel || selectedProject.link.replace(/^https?:\/\//, "")}
+                </a>
+              </Button>
+            )}
 
             {/* Contact to see project */}
             <div className="bg-card/90 rounded-2xl p-4 border-3 border-foreground/50 mb-4">

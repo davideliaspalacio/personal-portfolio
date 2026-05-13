@@ -2,16 +2,16 @@
 
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
-import { CodeIcon, CoffeeIcon, HeartIcon, RocketIcon, GlobeIcon, BlockchainIcon } from "./svg-icons"
+import { CodeIcon, CoffeeIcon, HeartIcon, RocketIcon, BlockchainIcon, AgentIcon } from "./svg-icons"
 import { useSound } from "@/lib/sounds"
 import { useTranslations } from "next-intl"
 
 const aboutItems = [
   { Icon: CodeIcon, key: "experience", color: "bg-playful-blue" },
-  { Icon: BlockchainIcon, key: "web3", color: "bg-playful-purple" },
+  { Icon: AgentIcon, key: "ai", color: "bg-playful-purple" },
   { Icon: HeartIcon, key: "architecture", color: "bg-playful-red" },
   { Icon: RocketIcon, key: "automation", color: "bg-playful-green" },
-  { Icon: GlobeIcon, key: "languages", color: "bg-playful-orange" },
+  { Icon: BlockchainIcon, key: "web3", color: "bg-playful-orange" },
   { Icon: CoffeeIcon, key: "remote", color: "bg-playful-yellow" },
 ]
 

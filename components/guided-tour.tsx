@@ -18,7 +18,6 @@ interface TourStep {
 const stepTargets = [
   { target: "hero", position: "bottom" },
   { target: "about", position: "top" },
-  { target: "video-intro", position: "top" },
   { target: "journey", position: "bottom" },
   { target: "skills", position: "top" },
   { target: "experience", position: "top" },
