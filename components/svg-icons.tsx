@@ -809,6 +809,68 @@ export function VirtualTecIcon({ className = "w-16 h-16" }: { className?: string
   )
 }
 
+export function CooWebIcon({ className = "w-16 h-16" }: { className?: string }) {
+  return (
+    <div className={`${className} relative overflow-hidden rounded-xl bg-white`}>
+      <Image
+        src="/cooweb-logo.jpeg"
+        alt="CooWeb"
+        fill
+        className="object-contain p-1"
+      />
+    </div>
+  )
+}
+
+export function VotoLocoIcon({ className = "w-16 h-16" }: { className?: string }) {
+  return (
+    <div className={`${className} relative overflow-hidden rounded-2xl bg-white border-2 border-foreground`}>
+      <Image
+        src="/votologo-logo.webp"
+        alt="VotoLoco"
+        fill
+        className="object-contain p-1"
+      />
+    </div>
+  )
+}
+
+export function LangChainIcon({ className = "w-12 h-12" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={className} fill="none">
+      <circle cx="30" cy="35" r="14" fill="#1C3C3C" stroke="#1a1a2e" strokeWidth="3" />
+      <circle cx="70" cy="35" r="14" fill="#1C3C3C" stroke="#1a1a2e" strokeWidth="3" />
+      <circle cx="30" cy="70" r="14" fill="#1C3C3C" stroke="#1a1a2e" strokeWidth="3" />
+      <circle cx="70" cy="70" r="14" fill="#1C3C3C" stroke="#1a1a2e" strokeWidth="3" />
+      <path d="M44 35 L56 35 M30 49 L30 56 M70 49 L70 56 M44 70 L56 70" stroke="#1a1a2e" strokeWidth="4" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function AgentIcon({ className = "w-12 h-12" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={className} fill="none">
+      <circle cx="50" cy="50" r="38" fill="#A78BFA" stroke="#1a1a2e" strokeWidth="3" />
+      <path d="M50 22 L55 42 L74 42 L58 54 L64 74 L50 62 L36 74 L42 54 L26 42 L45 42 Z" fill="#fff" stroke="#1a1a2e" strokeWidth="2" />
+      <circle cx="50" cy="50" r="6" fill="#FFE66D" stroke="#1a1a2e" strokeWidth="2" />
+    </svg>
+  )
+}
+
+export function VectorDBIcon({ className = "w-12 h-12" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={className} fill="none">
+      <ellipse cx="50" cy="22" rx="32" ry="10" fill="#4ECDC4" stroke="#1a1a2e" strokeWidth="3" />
+      <path d="M18 22 L18 50 Q18 60 50 60 Q82 60 82 50 L82 22" fill="#4ECDC4" stroke="#1a1a2e" strokeWidth="3" />
+      <path d="M18 50 L18 78 Q18 88 50 88 Q82 88 82 78 L82 50" fill="#4ECDC4" stroke="#1a1a2e" strokeWidth="3" />
+      <ellipse cx="50" cy="50" rx="32" ry="10" fill="none" stroke="#1a1a2e" strokeWidth="3" />
+      <circle cx="42" cy="74" r="2.5" fill="#1a1a2e" />
+      <circle cx="50" cy="78" r="2.5" fill="#1a1a2e" />
+      <circle cx="58" cy="74" r="2.5" fill="#1a1a2e" />
+    </svg>
+  )
+}
+
 export function PlayIcon({ className = "w-12 h-12" }: { className?: string }) {
   return (
     <svg viewBox="0 0 100 100" className={className} fill="none">

@@ -2,11 +2,16 @@
 
 import { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { CryptomexIcon, BlumerIcon, VirtualTecIcon, ExternalLinkIcon } from "./svg-icons"
+import { CryptomexIcon, BlumerIcon, VirtualTecIcon, CooWebIcon, BriefcaseIcon, ExternalLinkIcon } from "./svg-icons"
 import { useSound } from "@/lib/sounds"
 import { useTranslations } from "next-intl"
 
 const experienceConfig = [
+  {
+    color: "bg-playful-purple",
+    Icon: CooWebIcon,
+    website: "https://www.cooweb.us",
+  },
   {
     color: "bg-playful-yellow",
     Icon: CryptomexIcon,
@@ -15,6 +20,10 @@ const experienceConfig = [
   {
     color: "bg-playful-blue",
     Icon: VirtualTecIcon,
+  },
+  {
+    color: "bg-playful-orange",
+    Icon: BriefcaseIcon,
   },
   {
     color: "bg-playful-green",
@@ -95,7 +104,7 @@ export function ExperienceSection() {
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <motion.div
-                key={exp.company}
+                key={exp.name}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 animate={isVisible ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: index * 0.2, type: "spring" }}
@@ -125,7 +134,7 @@ export function ExperienceSection() {
                     <div className="flex-1 min-w-0">
                       <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                         <div>
-                          <h3 className="text-2xl md:text-3xl font-bold text-foreground">{exp.company}</h3>
+                          <h3 className="text-2xl md:text-3xl font-bold text-foreground">{exp.name}</h3>
                           <p className="text-lg text-foreground/90">{exp.role}</p>
                         </div>
                         <div className="text-right">

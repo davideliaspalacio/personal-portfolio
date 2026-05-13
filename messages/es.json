@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "David Palacio | Desarrollador Frontend & Web3",
-    "description": "Desarrollador Frontend & Web3 de Colombia. Construyendo experiencias web modernas e interactivas con React, Next.js y tecnologías blockchain."
+    "title": "David Palacio | Full Stack AI Engineer",
+    "description": "Full Stack AI Engineer desde Colombia. Construyendo productos web escalables, listos para producción y sistemas agénticos con React, Next.js, TypeScript, Python, Node.js y Web3."
   },
   "navbar": {
     "home": "Inicio",
@@ -24,31 +24,27 @@
     "steps": [
       {
         "title": "¡Bienvenido a mi Portafolio!",
-        "description": "¡Hola! Soy David Elias Palacio, un Desarrollador Frontend & Web3 de Colombia. ¡Déjame mostrarte el lugar!"
+        "description": "¡Hola! Soy David Elias Palacio, Full Stack AI Engineer desde Colombia. ¡Déjame mostrarte el lugar!"
       },
       {
         "title": "Sobre mí",
-        "description": "Aquí puedes conocer más sobre mi trayectoria, intereses y lo que me motiva como desarrollador."
-      },
-      {
-        "title": "Video de Presentación",
-        "description": "¡Mira un video rápido donde me presento y hablo sobre mi pasión por el desarrollo!"
+        "description": "Aquí puedes conocer más sobre mi trayectoria, lo que estoy construyendo con IA y lo que me motiva como ingeniero."
       },
       {
         "title": "Mi Trayectoria",
-        "description": "Sigue mi camino profesional desde principiante curioso hasta desarrollador profesional Frontend & Web3."
+        "description": "Sigue mi camino desde principiante curioso hasta Full Stack AI Engineer enviando sistemas agénticos."
       },
       {
         "title": "Mi Stack Tecnológico",
-        "description": "Estas son las tecnologías con las que trabajo diariamente. ¡Pasa el cursor sobre ellas para ver mi nivel de dominio!"
+        "description": "Estas son las tecnologías con las que trabajo a diario — desde React y TypeScript hasta APIs de LLMs y Web3. ¡Pasa el cursor para ver mi nivel!"
       },
       {
         "title": "Experiencia Laboral",
-        "description": "He trabajado en empresas increíbles como Cryptomex, Virtual Tec y Somos Blumer. ¡Haz clic para expandir y ver los detalles!"
+        "description": "He trabajado en CooWeb, Cryptomex, Virtual Tec y Somos Blumer. ¡Haz clic para ver los detalles!"
       },
       {
         "title": "Proyectos Destacados",
-        "description": "Echa un vistazo a algunos de los proyectos interesantes que he construido. ¡Haz clic en cualquier tarjeta para ver más detalles!"
+        "description": "Mira algunos de los productos que he construido — desde sistemas agénticos de IA hasta plataformas cívicas y Web3. ¡Haz clic en cualquier tarjeta para ver más!"
       },
       {
         "title": "Lo que Dice la Gente",
@@ -56,40 +52,40 @@
       },
       {
         "title": "¡Conectemos!",
-        "description": "¿Quieres trabajar juntos? ¡Envíame un mensaje aquí o conéctate conmigo en LinkedIn!"
+        "description": "¿Quieres trabajar juntos en un producto de IA? ¡Envíame un mensaje aquí o conéctate conmigo en LinkedIn!"
       }
     ]
   },
   "hero": {
     "greeting": "¡Hola! Soy David Elias Palacio",
-    "role": "Desarrollador Frontend & Web3",
-    "description": "con más de 3 años construyendo",
-    "scalable": "escalables",
-    "highPerformance": "alto rendimiento",
-    "webApplications": "aplicaciones web de",
+    "role": "Full Stack AI Engineer",
+    "description": "construyendo",
+    "scalable": "productos escalables",
+    "highPerformance": "potenciados por IA",
+    "webApplications": "y sistemas agénticos",
     "seeMyWork": "Ver mi trabajo",
     "downloadCV": "Descargar CV"
   },
   "about": {
     "title": "Sobre mí",
-    "intro": "Ingeniero de Software con",
+    "intro": "Full Stack AI Engineer con",
     "experience": "más de 3 años de experiencia",
-    "buildingScalable": "construyendo aplicaciones web escalables y de alto rendimiento usando",
-    "technologies": "React, Next.js y TypeScript",
-    "coreDevelopment": "He sido parte del equipo de desarrollo principal desde las primeras etapas, contribuyendo a la arquitectura inicial de una",
-    "multiTenant": "plataforma de producción multi-tenant",
-    "transactions": "que procesa millones de dólares en volumen de transacciones mensuales.",
-    "handsOn": "También tengo experiencia práctica con trabajo de backend y plataforma, incluyendo",
-    "apiIntegrations": "integraciones de API",
-    "automation": "flujos de automatización usando",
-    "aiTools": "y el desarrollo de",
+    "buildingScalable": "enviando aplicaciones web escalables y listas para producción usando",
+    "technologies": "React, Next.js, TypeScript y Node.js",
+    "coreDevelopment": "Diseño y envío productos full-stack de punta a punta — desde interfaces frontend hasta APIs backend y capas de datos — con un fuerte enfoque en integrar",
+    "multiTenant": "sistemas agénticos y flujos potenciados por LLMs",
+    "transactions": "que orquestan herramientas, recuperación de datos y lógica de negocio.",
+    "handsOn": "Me muevo cómodo en todo el stack — desde",
+    "apiIntegrations": "integraciones de APIs y terceros",
+    "automation": "hasta",
+    "aiTools": "flujos de automatización con n8n, integraciones de contratos inteligentes y",
     "aiPowered": "herramientas internas impulsadas por IA",
     "items": {
-      "experience": "Más de 3 años construyendo apps web escalables",
-      "web3": "Integración Web3 & Smart Contracts",
-      "architecture": "Arquitectura limpia y mantenibilidad a largo plazo",
-      "automation": "Integraciones de API y automatización con n8n",
-      "languages": "Español (Nativo) e Inglés (C1)",
+      "experience": "Base Full-Stack con más de 3 años en producción",
+      "ai": "Sistemas agénticos y productos con IA",
+      "architecture": "Arquitectura limpia y escalabilidad",
+      "automation": "Automatización con n8n e integraciones de API",
+      "web3": "Integraciones Web3 y Smart Contracts",
       "remote": "Trabajo remoto desde Colombia"
     }
   },
@@ -100,10 +96,28 @@
     "clickToCollapse": "Haz clic para colapsar",
     "companies": [
       {
+        "name": "CooWeb LLC",
+        "role": "Full Stack AI Engineer",
+        "period": "2026",
+        "duration": "",
+        "location": "Remoto",
+        "type": "Tiempo completo",
+        "highlights": [
+          "Diseño y envío aplicaciones full-stack de punta a punta, desde interfaces en React/Next.js hasta APIs backend y capas de base de datos, integrando capacidades de IA como parte central de la experiencia de producto.",
+          "Arquitecto soluciones de automatización impulsadas por IA en flujos internos y externos, diseñando sistemas agénticos con APIs de LLMs que orquestan uso de herramientas, recuperación de datos y lógica de negocio.",
+          "Construyo servicios backend y APIs listos para producción que soportan funcionalidades tradicionales y potenciadas por IA, asegurando escalabilidad, observabilidad y mantenibilidad.",
+          "Desarrollo experiencias frontend responsivas y type-safe con React, Next.js y TypeScript, incluyendo UIs en streaming para interacciones en tiempo real con LLMs y flujos con estado complejo.",
+          "Lidero la toma de decisiones técnicas en todo el stack — desde el diseño del esquema de base de datos y contratos de API hasta la selección de LLMs, diseño de prompts y patrones de integración alineados con los objetivos del producto.",
+          "Actúo como líder técnico y mentor de ingenieros junior, brindando code reviews, guía arquitectónica y soporte para desbloquear múltiples proyectos en paralelo.",
+          "Mantengo estándares de ingeniería sólidos con principios de código limpio, arquitectura modular y prácticas de producción tanto en sistemas tradicionales como en los impulsados por IA."
+        ],
+        "visitCompany": "Visitar Empresa"
+      },
+      {
         "name": "Cryptomex",
         "role": "Ingeniero de Software (Frontend / Web3)",
-        "period": "Jun 2024 - Presente",
-        "duration": "1 año 8 meses",
+        "period": "Jun 2024 - Mar 2026",
+        "duration": "1 año 10 meses",
         "location": "Remoto",
         "type": "Tiempo completo",
         "highlights": [
@@ -111,24 +125,37 @@
           "Diseñé e integré múltiples servicios y APIs de terceros dentro de una arquitectura impulsada por Web3, soportando flujos de pago de alto volumen y funcionalidades basadas en contratos inteligentes.",
           "Lideré mejoras de arquitectura frontend y rendimiento, reduciendo cuellos de botella y mejorando la velocidad, confiabilidad y mantenibilidad de la aplicación.",
           "Colaboré estrechamente con los equipos de producto, backend y blockchain para entregar funcionalidades de cara al cliente utilizadas diariamente en producción.",
-          "Contribuí activamente a mejoras de UI/UX, asegurando interfaces accesibles, intuitivas y de alto rendimiento.",
+          "Contribuí a herramientas internas impulsadas por IA y flujos de automatización para soportar operaciones de negocio y mejorar la productividad del equipo.",
           "Identifiqué riesgos técnicos tempranamente y entregué soluciones listas para producción con un fuerte enfoque en escalabilidad y mantenibilidad a largo plazo."
         ],
         "visitCompany": "Visitar Empresa"
       },
       {
-        "name": "Virtual Tec",
+        "name": "Virtual Tech",
         "role": "Ingeniero de Software Full-Stack",
         "period": "Feb 2024 - Jun 2024",
         "duration": "5 meses",
         "location": "Barranquilla, Remoto",
         "type": "",
         "highlights": [
-          "Construí y entregué funcionalidades full-stack usando React y TypeScript, integrando interfaces frontend con servicios backend y APIs REST.",
-          "Actué como puente entre los equipos frontend y backend, asegurando una integración fluida de APIs y un flujo de datos consistente.",
-          "Trabajé estrechamente con clientes y stakeholders para traducir requisitos de negocio en soluciones técnicas escalables.",
-          "Apoyé el despliegue y operación de servicios basados en la nube, contribuyendo a la confiabilidad y escalabilidad del sistema.",
-          "Asumí la responsabilidad de funcionalidades desde la definición de requisitos hasta el desarrollo, pruebas y lanzamiento en producción."
+          "Entregué funcionalidades full-stack de punta a punta usando React, TypeScript y servicios RESTful, asegurando una integración fluida entre interfaces frontend y sistemas backend.",
+          "Actué como puente cross-funcional entre equipos frontend y backend, alineando diseño de APIs, contratos de datos e implementación para garantizar flujos de datos consistentes y escalables.",
+          "Trabajé directamente con clientes y stakeholders para traducir requisitos de negocio en soluciones técnicas listas para producción con escalabilidad a largo plazo en mente.",
+          "Asumí la responsabilidad total del ciclo de vida de funcionalidades — desde análisis de requisitos y diseño de sistema hasta implementación, pruebas y lanzamiento en producción."
+        ]
+      },
+      {
+        "name": "Freelance",
+        "role": "Desarrollador Full-Stack",
+        "period": "Nov 2023 - Ene 2024",
+        "duration": "3 meses",
+        "location": "Independiente · Remoto",
+        "type": "",
+        "highlights": [
+          "Trabajé directamente con startups y pequeñas empresas para diseñar, arquitectar y entregar aplicaciones web listas para producción desde concepto hasta lanzamiento.",
+          "Lideré el desarrollo end-to-end en frontend y backend, tomando decisiones arquitectónicas priorizando escalabilidad, mantenibilidad y rendimiento.",
+          "Diseñé e implementé APIs RESTful e integré servicios de terceros para soportar flujos de trabajo críticos del negocio.",
+          "Gestioné el ciclo completo de despliegue, incluyendo configuración cloud, setup de entornos y procesos de release."
         ]
       },
       {
@@ -156,30 +183,13 @@
     "contactButton": "Contáctame para Ver Este Proyecto",
     "items": [
       {
-        "title": "Plataforma E-commerce",
-        "shortDescription": "Solución e-commerce full-stack escalable para negocios con gestión de inventario, pagos en línea y panel de administración.",
-        "fullDescription": "Una plataforma e-commerce completa construida con un stack tecnológico moderno. Frontend construido con Next.js y TypeScript para una experiencia de compra rápida y optimizada para SEO. Backend impulsado por NestJS con PostgreSQL para una gestión robusta de datos. Las características incluyen: seguimiento de inventario en tiempo real, integraciones de múltiples pasarelas de pago, gestión de pedidos, panel de administración y arquitectura escalable lista para uso empresarial.",
-        "tags": ["TypeScript", "Next.js", "NestJS", "PostgreSQL"]
-      },
-      {
-        "title": "API de Reconocimiento de Placas",
-        "shortDescription": "Sistema de detección y reconocimiento de placas vehiculares en tiempo real usando visión por computadora y deep learning.",
-        "fullDescription": "Una API impulsada por IA para reconocimiento de placas en tiempo real. Construida con Python, OpenCV para procesamiento de imágenes y TensorFlow para modelos de deep learning. El sistema puede detectar y leer placas vehiculares desde imágenes y transmisiones de video con alta precisión. Desplegada como API REST para fácil integración con sistemas existentes como gestión de estacionamientos, sistemas de peaje y aplicaciones de seguridad.",
-        "tags": ["Python", "OpenCV", "TensorFlow", "REST API"],
-        "year": "2023"
-      },
-      {
-        "title": "Sistema de Reconocimiento Facial",
-        "shortDescription": "Sistema de reconocimiento facial impulsado por IA para verificación de identidad y aplicaciones de control de acceso.",
-        "fullDescription": "Un sistema de reconocimiento facial construido con Python y tecnologías de deep learning. Implementa detección de rostros, extracción de características y coincidencia de identidad para aplicaciones de seguridad y control de acceso. Las características incluyen detección de rostros en tiempo real, base de datos de codificación facial y API de verificación de identidad. Construido con OpenCV, dlib y Flask para la interfaz web.",
-        "tags": ["Python", "Deep Learning", "OpenCV", "Flask"],
-        "year": "2023"
-      },
-      {
-        "title": "App Multiplataforma",
-        "shortDescription": "Aplicación móvil y web con código compartido, integración de API REST y soporte offline.",
-        "fullDescription": "Una aplicación multiplataforma que ofrece una UI perfecta en móvil y web. Características incluyen arquitectura offline-first con persistencia de datos local, integración perfecta de API REST y sincronización en tiempo real. Entregada como MVP e iterada basándose en feedback de usuarios para mejorar las métricas de UX en un 35%.",
-        "tags": ["React Native", "FlutterFlow", "APIs"]
+        "title": "VotoLoco — Plataforma de Afinidad Cívica",
+        "shortDescription": "Plataforma cívica en producción para las elecciones presidenciales de Colombia 2026. Más de 100.000 visitas, 12.000+ tests de afinidad completados, mencionada en radio nacional — operando bajo USD 10/mes de infraestructura.",
+        "fullDescription": "VotoLoco es una plataforma cívica en producción construida para las elecciones presidenciales de Colombia 2026. Los usuarios responden un test de afinidad de 10 ejes que compara sus posturas con el programa oficial de cada candidato — con citas textuales y la página exacta del PDF de la cual sale cada postura.\n\nLa diseñé y construí end-to-end como Tech Lead y Backend Architect, desde el commit cero hasta producción estable en 6 semanas. En producción atendió más de 100.000 visitas, 12.000+ tests completados, picos de 1.200 usuarios concurrentes bajo load testing y 99,95% de uptime — todo operando bajo USD 10/mes de infraestructura. Mencionada en radio nacional colombiana.\n\nStack: NestJS + TypeScript + Postgres con Row-Level Security, cola asíncrona Bull/Redis y un pipeline de Anthropic Claude (Sonnet para extracción de postura, Haiku para clasificación de chunks). El pipeline de IA de dos etapas ingestó 8 PDFs oficiales (60-200 páginas cada uno), procesó más de 8 millones de tokens con trazabilidad completa y registró cero dobles facturaciones gracias a endpoints idempotentes. Frontend en Next.js 16 + React 19 + shadcn/ui, desplegado en Vercel + Railway con observabilidad de Sentry.\n\nEl cumplimiento legal se trató como requisito funcional desde el día cero: Resolución 2/2023 del CNE (guard de silencio electoral programable), Ley 996/2005 (medir afinidad, no intención de voto) y Ley 1581 Habeas Data (anónima por diseño, opt-in granular para newsletter). Cero incidentes de seguridad registrados.",
+        "tags": ["NestJS", "TypeScript", "Postgres", "Supabase RLS", "Bull/Redis", "Claude AI", "Next.js 16", "Sentry"],
+        "year": "2026",
+        "link": "https://votoloco.com",
+        "linkLabel": "Visitar votoloco.com"
       }
     ]
   },
@@ -188,8 +198,9 @@
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
+      "ai": "IA / Agéntico",
       "blockchain": "Blockchain / Web3",
-      "tools": "Herramientas & IA"
+      "tools": "Herramientas & DevOps"
     },
     "badges": {
       "years": "años",
@@ -213,22 +224,22 @@
       {
         "name": "Heric Olier",
         "role": "Líder Frontend",
-        "content": "David es un desarrollador frontend excepcional. Su atención al detalle y capacidad para crear interfaces pixel-perfect es impresionante. Rápidamente se convirtió en un jugador clave en el desarrollo de nuestra plataforma Web3."
+        "content": "David es un ingeniero excepcional. Su atención al detalle y su capacidad para enviar interfaces pixel-perfect listas para producción es impresionante. Rápidamente se convirtió en pieza clave del desarrollo de nuestra plataforma Web3."
       },
       {
         "name": "Danilo Ibáñez",
         "role": "Desarrollador Web3",
-        "content": "Trabajar con David en integraciones Web3 fue un placer. Tiene una gran capacidad para traducir requisitos complejos de blockchain en experiencias de usuario fluidas y siempre entrega trabajo de alta calidad a tiempo."
+        "content": "Trabajar con David en integraciones Web3 e impulsadas por IA fue un placer. Tiene una gran capacidad para traducir requisitos complejos en experiencias de usuario fluidas y siempre entrega trabajo de alta calidad a tiempo."
       },
       {
         "name": "Diego Barona",
         "role": "Desarrollador Backend",
-        "content": "David mostró un crecimiento increíble durante su tiempo con nosotros. Su entusiasmo por aprender y adaptarse a nuevas tecnologías lo hizo destacar. ¡Un verdadero jugador de equipo con una sólida comprensión del desarrollo full-stack!"
+        "content": "David mostró un crecimiento increíble durante su tiempo con nosotros. Su entusiasmo por aprender y adaptarse a nuevas tecnologías — incluyendo IA y herramientas de LLMs — lo hizo destacar. ¡Un verdadero jugador de equipo con una sólida comprensión full-stack!"
       },
       {
         "name": "José Manuel Cuello Royo",
         "role": "Desarrollador Full Stack",
-        "content": "David tiene un excelente ojo tanto para la arquitectura frontend como backend. No solo implementa funcionalidades de manera impecable, sino que también proporciona valiosos insights técnicos que mejoran la calidad general del producto."
+        "content": "David tiene un excelente ojo tanto para la arquitectura frontend como backend. No solo implementa funcionalidades de manera impecable, sino que también aporta insights técnicos valiosos que mejoran la calidad general del producto."
       }
     ]
   },
@@ -245,7 +256,7 @@
         "Aprendiendo Python, R y SQL para análisis y manipulación de datos",
         "Estudiando algoritmos, estructuras de datos y fundamentos de programación",
         "Aplicando métodos estadísticos y conceptos de machine learning",
-        "Construyendo proyectos basados en datos con conjuntos de datos del mundo real"
+        "Construyendo proyectos basados en datos del mundo real — alimentando directamente mi trabajo como AI Engineer"
       ]
     },
     "certificationsTitle": "Certificaciones",
@@ -294,13 +305,13 @@
   },
   "journey": {
     "title": "Mi Trayectoria",
-    "subtitle": "De principiante curioso a desarrollador profesional",
+    "subtitle": "De principiante curioso a Full Stack AI Engineer",
     "clickToRead": "Haz clic para leer más...",
     "steps": [
       {
         "year": "2022",
         "title": "El Comienzo",
-        "description": "Comencé mi viaje en el desarrollo de software, sumergiéndome en HTML, CSS y JavaScript. Construí mis primeros proyectos y me enamoré de crear experiencias web interactivas."
+        "description": "Comencé mi camino en el desarrollo de software, sumergiéndome en HTML, CSS y JavaScript. Construí mis primeros proyectos y me enamoré de crear experiencias web interactivas."
       },
       {
         "year": "2023",
@@ -313,9 +324,14 @@
         "description": "Me mudé a Virtual Tec como Ingeniero Full-Stack. Construí funcionalidades usando React y TypeScript, actué como puente entre equipos frontend y backend, y trabajé directamente con clientes."
       },
       {
-        "year": "2024-Ahora",
-        "title": "Desarrollador Frontend & Web3",
-        "description": "Actualmente en Cryptomex como Desarrollador Frontend/Web3. Construyendo interfaces, integrando tecnologías blockchain y contribuyendo a una plataforma que procesa millones en transacciones."
+        "year": "2024-2026",
+        "title": "Frontend & Web3 en Cryptomex",
+        "description": "Pasé casi dos años en Cryptomex como Ingeniero Frontend/Web3. Construí y escalé una plataforma Web3 que procesa millones en transacciones mensuales, mientras me adentraba en herramientas internas potenciadas por IA y automatizaciones."
+      },
+      {
+        "year": "2026",
+        "title": "Full Stack AI Engineer",
+        "description": "Me uní a CooWeb LLC como Full Stack AI Engineer. Diseñando y enviando sistemas agénticos, productos potenciados por LLMs y plataformas full-stack — liderando decisiones técnicas en todo el stack y mentoreando a ingenieros junior."
       }
     ]
   },
@@ -325,13 +341,13 @@
     "outdatedNotice": "este video está desactualizado pero aquí puedes ver mi inglés",
     "clickToPlay": "Haz clic para reproducir la presentación",
     "facts": [
-      "Más de 2 años de experiencia",
-      "Especialista Frontend & Web3",
+      "Más de 3 años de experiencia",
+      "Full Stack AI Engineer",
+      "Construyendo sistemas agénticos",
+      "Entusiasta de LLMs y RAG",
       "Ubicado en Colombia",
-      "Entusiasta de React",
+      "Experto en React y TypeScript",
       "Defensor del Código Limpio",
-      "Apasionado por UI/UX",
-      "Experto en TypeScript",
       "Siempre Aprendiendo"
     ]
   },
@@ -357,7 +373,7 @@
       {
         "stat": "100%",
         "label": "Pasión",
-        "description": "Por construir grandes productos"
+        "description": "Por construir grandes productos de IA"
       }
     ]
   },
@@ -378,7 +394,7 @@
   },
   "contact": {
     "title": "Construyamos algo increíble juntos",
-    "subtitle": "¿Tienes una idea? ¿Quieres colaborar? ¿Solo quieres saludar? ¡Envíame un mensaje!",
+    "subtitle": "¿Tienes una idea para un producto de IA? ¿Quieres colaborar? ¿Solo quieres saludar? ¡Envíame un mensaje!",
     "form": {
       "name": "Tu Nombre",
       "namePlaceholder": "¿Cómo debo llamarte?",

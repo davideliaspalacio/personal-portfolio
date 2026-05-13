@@ -2,12 +2,12 @@
 
 import { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { TimelineIcon, RocketIcon, CodeIcon, BlockchainIcon, StarIcon } from "./svg-icons"
+import { TimelineIcon, RocketIcon, CodeIcon, BlockchainIcon, StarIcon, AgentIcon } from "./svg-icons"
 import { useSound } from "@/lib/sounds"
 import { useTranslations } from "next-intl"
 
-const journeyIcons = [CodeIcon, RocketIcon, StarIcon, BlockchainIcon]
-const journeyColors = ["bg-playful-blue", "bg-playful-green", "bg-playful-yellow", "bg-playful-purple"]
+const journeyIcons = [CodeIcon, RocketIcon, StarIcon, BlockchainIcon, AgentIcon]
+const journeyColors = ["bg-playful-blue", "bg-playful-green", "bg-playful-yellow", "bg-playful-orange", "bg-playful-purple"]
 
 export function JourneySection() {
   const t = useTranslations("journey")
