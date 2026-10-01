@@ -40,7 +40,7 @@
       },
       {
         "title": "Experiencia Laboral",
-        "description": "He trabajado en CooWeb, Cryptomex, Virtual Tec y Somos Blumer. ¡Haz clic para ver los detalles!"
+        "description": "He trabajado en Eventim, CooWeb, Cryptomex, Virtual Tec y Somos Blumer. ¡Haz clic para ver los detalles!"
       },
       {
         "title": "Proyectos Destacados",
@@ -96,20 +96,37 @@
     "clickToCollapse": "Haz clic para colapsar",
     "companies": [
       {
-        "name": "CooWeb LLC",
-        "role": "Full Stack AI Engineer",
-        "period": "2026",
+        "name": "EVENTIM",
+        "role": "Full Stack Engineer",
+        "period": "Ago 2026 - Presente",
         "duration": "",
         "location": "Remoto",
         "type": "Tiempo completo",
         "highlights": [
-          "Diseño y envío aplicaciones full-stack de punta a punta, desde interfaces en React/Next.js hasta APIs backend y capas de base de datos, integrando capacidades de IA como parte central de la experiencia de producto.",
-          "Arquitecto soluciones de automatización impulsadas por IA en flujos internos y externos, diseñando sistemas agénticos con APIs de LLMs que orquestan uso de herramientas, recuperación de datos y lógica de negocio.",
-          "Construyo servicios backend y APIs listos para producción que soportan funcionalidades tradicionales y potenciadas por IA, asegurando escalabilidad, observabilidad y mantenibilidad.",
-          "Desarrollo experiencias frontend responsivas y type-safe con React, Next.js y TypeScript, incluyendo UIs en streaming para interacciones en tiempo real con LLMs y flujos con estado complejo.",
-          "Lidero la toma de decisiones técnicas en todo el stack — desde el diseño del esquema de base de datos y contratos de API hasta la selección de LLMs, diseño de prompts y patrones de integración alineados con los objetivos del producto.",
-          "Actúo como líder técnico y mentor de ingenieros junior, brindando code reviews, guía arquitectónica y soporte para desbloquear múltiples proyectos en paralelo.",
-          "Mantengo estándares de ingeniería sólidos con principios de código limpio, arquitectura modular y prácticas de producción tanto en sistemas tradicionales como en los impulsados por IA."
+          "Full Stack Engineer en CTS EVENTIM, el proveedor de ticketing número 1 de Europa, cuyos sistemas comercializan más de 300 millones de entradas al año en más de 25 países.",
+          "Trabajo en varios equipos de producto, contribuyendo a servicios backend y funcionalidades de cara al cliente a gran escala.",
+          "Construyo y mantengo servicios backend y APIs con Java y Spring Boot, así como aplicaciones PHP que soportan flujos clave de ticketing.",
+          "Desarrollo experiencias frontend modernas y responsivas con Vue.js, integradas end-to-end con las APIs del backend.",
+          "Despliego y opero servicios en AWS, con foco en confiabilidad, escalabilidad y rendimiento durante ventas de entradas de alto tráfico.",
+          "Colaboro con equipos multifuncionales en code reviews, diseño técnico y buenas prácticas en un stack políglota."
+        ],
+        "visitCompany": "Visitar Empresa"
+      },
+      {
+        "name": "CooWeb LLC",
+        "role": "Full Stack AI Engineer",
+        "period": "Abr 2026 - Jul 2026",
+        "duration": "4 meses",
+        "location": "Remoto",
+        "type": "Tiempo completo",
+        "highlights": [
+          "Diseñé y lancé aplicaciones full-stack de punta a punta, desde interfaces en React/Next.js hasta APIs backend y capas de base de datos, integrando capacidades de IA como parte central de la experiencia de producto.",
+          "Diseñé la arquitectura de soluciones de automatización impulsadas por IA en flujos internos y externos, creando sistemas agénticos con APIs de LLMs que orquestan uso de herramientas, recuperación de datos y lógica de negocio.",
+          "Construí servicios backend y APIs listos para producción que soportan funcionalidades tradicionales y potenciadas por IA, asegurando escalabilidad, observabilidad y mantenibilidad.",
+          "Desarrollé experiencias frontend responsivas y type-safe con React, Next.js y TypeScript, incluyendo UIs en streaming para interacciones en tiempo real con LLMs y flujos con estado complejo.",
+          "Lideré la toma de decisiones técnicas en todo el stack — desde el diseño del esquema de base de datos y contratos de API hasta la selección de LLMs, diseño de prompts y patrones de integración alineados con los objetivos del producto.",
+          "Actué como líder técnico y mentor de ingenieros junior, brindando code reviews, guía arquitectónica y soporte para desbloquear múltiples proyectos en paralelo.",
+          "Mantuve estándares de ingeniería sólidos con principios de código limpio, arquitectura modular y prácticas de producción tanto en sistemas tradicionales como en los impulsados por IA."
         ],
         "visitCompany": "Visitar Empresa"
       },
@@ -186,7 +203,16 @@
         "title": "VotoLoco — Plataforma de Afinidad Cívica",
         "shortDescription": "Plataforma cívica en producción para las elecciones presidenciales de Colombia 2026. Más de 100.000 visitas, 12.000+ tests de afinidad completados, mencionada en radio nacional — operando bajo USD 10/mes de infraestructura.",
         "fullDescription": "VotoLoco es una plataforma cívica en producción construida para las elecciones presidenciales de Colombia 2026. Los usuarios responden un test de afinidad de 10 ejes que compara sus posturas con el programa oficial de cada candidato — con citas textuales y la página exacta del PDF de la cual sale cada postura.\n\nLa diseñé y construí end-to-end como Tech Lead y Backend Architect, desde el commit cero hasta producción estable en 6 semanas. En producción atendió más de 100.000 visitas, 12.000+ tests completados, picos de 1.200 usuarios concurrentes bajo load testing y 99,95% de uptime — todo operando bajo USD 10/mes de infraestructura. Mencionada en radio nacional colombiana.\n\nStack: NestJS + TypeScript + Postgres con Row-Level Security, cola asíncrona Bull/Redis y un pipeline de Anthropic Claude (Sonnet para extracción de postura, Haiku para clasificación de chunks). El pipeline de IA de dos etapas ingestó 8 PDFs oficiales (60-200 páginas cada uno), procesó más de 8 millones de tokens con trazabilidad completa y registró cero dobles facturaciones gracias a endpoints idempotentes. Frontend en Next.js 16 + React 19 + shadcn/ui, desplegado en Vercel + Railway con observabilidad de Sentry.\n\nEl cumplimiento legal se trató como requisito funcional desde el día cero: Resolución 2/2023 del CNE (guard de silencio electoral programable), Ley 996/2005 (medir afinidad, no intención de voto) y Ley 1581 Habeas Data (anónima por diseño, opt-in granular para newsletter). Cero incidentes de seguridad registrados.",
-        "tags": ["NestJS", "TypeScript", "Postgres", "Supabase RLS", "Bull/Redis", "Claude AI", "Next.js 16", "Sentry"],
+        "tags": [
+          "NestJS",
+          "TypeScript",
+          "Postgres",
+          "Supabase RLS",
+          "Bull/Redis",
+          "Claude AI",
+          "Next.js 16",
+          "Sentry"
+        ],
         "year": "2026",
         "link": "https://votoloco.com",
         "linkLabel": "Visitar votoloco.com"
@@ -330,8 +356,13 @@
       },
       {
         "year": "2026",
-        "title": "Full Stack AI Engineer",
-        "description": "Me uní a CooWeb LLC como Full Stack AI Engineer. Diseñando y enviando sistemas agénticos, productos potenciados por LLMs y plataformas full-stack — liderando decisiones técnicas en todo el stack y mentoreando a ingenieros junior."
+        "title": "AI Engineering en CooWeb",
+        "description": "Me uní a CooWeb LLC como Full Stack AI Engineer. Diseñé y lancé sistemas agénticos, productos potenciados por LLMs y plataformas full-stack — liderando decisiones técnicas en todo el stack y mentoreando a ingenieros junior."
+      },
+      {
+        "year": "2026",
+        "title": "Full Stack en Eventim",
+        "description": "Me uní a CTS EVENTIM, la empresa líder de ticketing en Europa, como Full Stack Engineer. Trabajo en varios equipos con PHP, Java + Spring Boot, Vue.js y AWS en plataformas que gestionan millones de ventas de entradas."
       }
     ]
   },

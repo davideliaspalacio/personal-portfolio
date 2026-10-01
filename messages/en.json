@@ -40,7 +40,7 @@
       },
       {
         "title": "Work Experience",
-        "description": "I've worked at CooWeb, Cryptomex, Virtual Tec and Somos Blumer. Click to expand and see details!"
+        "description": "I've worked at Eventim, CooWeb, Cryptomex, Virtual Tec and Somos Blumer. Click to expand and see details!"
       },
       {
         "title": "Featured Projects",
@@ -96,20 +96,37 @@
     "clickToCollapse": "Click to collapse",
     "companies": [
       {
-        "name": "CooWeb LLC",
-        "role": "Full Stack AI Engineer",
-        "period": "2026",
+        "name": "EVENTIM",
+        "role": "Full Stack Engineer",
+        "period": "Aug 2026 - Present",
         "duration": "",
         "location": "Remote",
         "type": "Full-time",
         "highlights": [
-          "Design and ship full-stack applications end-to-end, from React/Next.js interfaces to backend APIs and database layers, integrating AI capabilities as a core part of the product experience.",
-          "Architect AI-driven automation solutions across internal and external workflows, designing agentic systems with LLM APIs that orchestrate tool use, data retrieval and business logic.",
-          "Build production-grade backend services and APIs supporting both traditional product features and AI-powered functionality, ensuring scalability, observability and maintainability.",
-          "Develop responsive, type-safe frontend experiences with React, Next.js and TypeScript, including streaming UIs for real-time LLM interactions and complex stateful flows.",
-          "Lead technical decision-making across the full stack — from database schema design and API contracts to LLM selection, prompt design and integration patterns aligned with product objectives.",
-          "Act as technical lead and mentor for junior engineers, providing code reviews, architectural guidance and unblocking support across multiple concurrent projects.",
-          "Maintain strong engineering standards through clean code principles, modular architecture and production-grade practices across both traditional and AI-powered systems."
+          "Full Stack Engineer at CTS EVENTIM, Europe's #1 ticketing provider, whose systems market over 300 million tickets per year across 25+ countries.",
+          "Work across multiple product teams, contributing to backend services and customer-facing features at large scale.",
+          "Build and maintain backend services and APIs with Java and Spring Boot, as well as PHP applications that power core ticketing workflows.",
+          "Develop modern, responsive frontend experiences with Vue.js, integrated end-to-end with backend APIs.",
+          "Deploy and operate services on AWS, with a focus on reliability, scalability and performance under high-traffic ticket sales.",
+          "Collaborate with cross-functional teams on code reviews, technical design and best practices across a polyglot stack."
+        ],
+        "visitCompany": "Visit Company"
+      },
+      {
+        "name": "CooWeb LLC",
+        "role": "Full Stack AI Engineer",
+        "period": "Apr 2026 - Jul 2026",
+        "duration": "4 mos",
+        "location": "Remote",
+        "type": "Full-time",
+        "highlights": [
+          "Designed and shipped full-stack applications end-to-end, from React/Next.js interfaces to backend APIs and database layers, integrating AI capabilities as a core part of the product experience.",
+          "Architected AI-driven automation solutions across internal and external workflows, designing agentic systems with LLM APIs that orchestrate tool use, data retrieval and business logic.",
+          "Built production-grade backend services and APIs supporting both traditional product features and AI-powered functionality, ensuring scalability, observability and maintainability.",
+          "Developed responsive, type-safe frontend experiences with React, Next.js and TypeScript, including streaming UIs for real-time LLM interactions and complex stateful flows.",
+          "Led technical decision-making across the full stack — from database schema design and API contracts to LLM selection, prompt design and integration patterns aligned with product objectives.",
+          "Acted as technical lead and mentor for junior engineers, providing code reviews, architectural guidance and unblocking support across multiple concurrent projects.",
+          "Maintained strong engineering standards through clean code principles, modular architecture and production-grade practices across both traditional and AI-powered systems."
         ],
         "visitCompany": "Visit Company"
       },
@@ -186,7 +203,16 @@
         "title": "VotoLoco — Civic Affinity Platform",
         "shortDescription": "Production civic platform for Colombia's 2026 elections. 100k+ visits, 12k+ affinity tests completed, featured on national radio — all running on under USD 10/month of infrastructure.",
         "fullDescription": "VotoLoco is a production civic platform built for Colombia's 2026 presidential elections. Users take a 10-axis affinity quiz that compares their views to each candidate's official government program — with verbatim citations and the exact PDF page where each posture comes from.\n\nI designed and built it end-to-end as Tech Lead and Backend Architect, from commit zero to stable production in 6 weeks. In production it served 100k+ visits, 12k+ completed tests, peaks of 1.2k concurrent users under load testing and 99.95% uptime — all on under USD 10/month of infrastructure. Featured on Colombian national radio.\n\nStack: NestJS + TypeScript + Postgres with Row-Level Security, a Bull/Redis async job queue and an Anthropic Claude pipeline (Sonnet for posture extraction, Haiku for chunk classification). The two-stage AI pipeline ingested 8 official PDFs (60-200 pages each), processed 8M+ tokens with full traceability and recorded zero double-billing thanks to idempotent endpoints. Frontend on Next.js 16 + React 19 + shadcn/ui, deployed on Vercel + Railway with Sentry observability.\n\nCompliance was treated as a functional requirement from day zero: CNE Resolución 2/2023 (programmable electoral silence guard), Ley 996/2005 (measuring affinity, not vote intent) and Ley 1581 Habeas Data (anonymous-by-design, granular opt-in). Zero security incidents recorded.",
-        "tags": ["NestJS", "TypeScript", "Postgres", "Supabase RLS", "Bull/Redis", "Claude AI", "Next.js 16", "Sentry"],
+        "tags": [
+          "NestJS",
+          "TypeScript",
+          "Postgres",
+          "Supabase RLS",
+          "Bull/Redis",
+          "Claude AI",
+          "Next.js 16",
+          "Sentry"
+        ],
         "year": "2026",
         "link": "https://votoloco.com",
         "linkLabel": "Visit votoloco.com"
@@ -330,8 +356,13 @@
       },
       {
         "year": "2026",
-        "title": "Full Stack AI Engineer",
-        "description": "Joined CooWeb LLC as a Full Stack AI Engineer. Designing and shipping agentic systems, LLM-powered products and full-stack platforms — leading technical decisions across the stack and mentoring junior engineers."
+        "title": "AI Engineering at CooWeb",
+        "description": "Joined CooWeb LLC as a Full Stack AI Engineer. Designed and shipped agentic systems, LLM-powered products and full-stack platforms — leading technical decisions across the stack and mentoring junior engineers."
+      },
+      {
+        "year": "2026",
+        "title": "Full Stack at Eventim",
+        "description": "Joined CTS EVENTIM, Europe's leading ticketing company, as a Full Stack Engineer. Working across multiple teams with PHP, Java + Spring Boot, Vue.js and AWS on platforms that handle millions of ticket sales."
       }
     ]
   },

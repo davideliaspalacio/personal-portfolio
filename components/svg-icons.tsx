@@ -809,6 +809,23 @@ export function VirtualTecIcon({ className = "w-16 h-16" }: { className?: string
   )
 }
 
+export function EventimIcon({ className = "w-16 h-16" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={className} fill="none">
+      <path
+        d="M12 30 h76 v12 a8 8 0 0 0 0 16 v12 h-76 v-12 a8 8 0 0 0 0 -16 z"
+        fill="#1E3A8A"
+        stroke="#1a1a2e"
+        strokeWidth="3"
+        strokeLinejoin="round"
+      />
+      <line x1="64" y1="34" x2="64" y2="66" stroke="#FACC15" strokeWidth="3" strokeDasharray="4 4" />
+      <text x="38" y="57" textAnchor="middle" fontSize="20" fontWeight="bold" fill="#FACC15">E</text>
+      <circle cx="76" cy="50" r="4" fill="#FACC15" />
+    </svg>
+  )
+}
+
 export function CooWebIcon({ className = "w-16 h-16" }: { className?: string }) {
   return (
     <div className={`${className} relative overflow-hidden rounded-xl bg-white`}>
@@ -843,6 +860,21 @@ export function LangChainIcon({ className = "w-12 h-12" }: { className?: string 
       <circle cx="30" cy="70" r="14" fill="#1C3C3C" stroke="#1a1a2e" strokeWidth="3" />
       <circle cx="70" cy="70" r="14" fill="#1C3C3C" stroke="#1a1a2e" strokeWidth="3" />
       <path d="M44 35 L56 35 M30 49 L30 56 M70 49 L70 56 M44 70 L56 70" stroke="#1a1a2e" strokeWidth="4" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function TicketIcon({ className = "w-12 h-12" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={className} fill="none">
+      <path
+        d="M12 30 h76 v12 a8 8 0 0 0 0 16 v12 h-76 v-12 a8 8 0 0 0 0 -16 z"
+        fill="#F87171"
+        stroke="#1a1a2e"
+        strokeWidth="3"
+        strokeLinejoin="round"
+      />
+      <line x1="64" y1="34" x2="64" y2="66" stroke="#1a1a2e" strokeWidth="3" strokeDasharray="4 4" />
     </svg>
   )
 }

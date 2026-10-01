@@ -2,11 +2,16 @@
 
 import { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { CryptomexIcon, BlumerIcon, VirtualTecIcon, CooWebIcon, BriefcaseIcon, ExternalLinkIcon } from "./svg-icons"
+import { CryptomexIcon, BlumerIcon, VirtualTecIcon, CooWebIcon, EventimIcon, BriefcaseIcon, ExternalLinkIcon } from "./svg-icons"
 import { useSound } from "@/lib/sounds"
 import { useTranslations } from "next-intl"
 
 const experienceConfig = [
+  {
+    color: "bg-playful-red",
+    Icon: EventimIcon,
+    website: "https://www.eventim.de",
+  },
   {
     color: "bg-playful-purple",
     Icon: CooWebIcon,
@@ -72,8 +77,8 @@ export function ExperienceSection() {
   }, [playSound])
 
   const toggleExpand = (index: number) => {
-    // Use crypto sound for Cryptomex (first company - index 0)
-    if (index === 0) {
+    // Use crypto sound for Cryptomex
+    if (experiences[index]?.name === "Cryptomex") {
       playSound("transaction")
     } else {
       playSound("pop")
